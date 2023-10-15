@@ -1,0 +1,20 @@
+/* #424446
+#C3C5C7
+#cb952b */
+
+nav {
+    display: flex;
+}
+
+.menu-items {
+    padding-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .navlogo {
+        float: right;
+        margin-top: 10px;
+        width: 20px;
+        height: 20px;
+    }
+}
