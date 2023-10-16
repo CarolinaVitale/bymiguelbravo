@@ -1,24 +1,19 @@
 import logo from './logo.svg';
-import './App.css';
-import Bar from './Navbar/Navbar';
+import './styles/App.css';
+import Bar from './pages/Navbar';
+import background from './images/background.jpg'
+import logo3D from './images/logotype-3d.png'
 
 function App() {
   return (
     <div className="App">
+      <div className='container'>
+        <img src={background} className="background" alt="background" />
+        <img src={logo3D} className='logo-3d' alt="logo-3d" />
+      </div>
       <Bar />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );

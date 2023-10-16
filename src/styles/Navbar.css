@@ -7,16 +7,19 @@ mustard: #cb952b
 
 
 nav {
-    font-family: Courier, monospace;
+    font-family: Courier, sans-serif;
     
 }
 .custom-navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #424446;
-    color: #C3C5C7;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    color: #424446;
     padding: 5px;
+    margin: 0;
 }
 
 .left-section {
@@ -31,7 +34,7 @@ nav {
 
 .menu-toggle {
     display: block;
-    color: #C3C5C7;
+    color: #424446;
     font-size: 24px;
     cursor: pointer;
 }
@@ -48,18 +51,15 @@ nav {
 
 .menu-items a {
     text-decoration: none;
-    color: #C3C5C7;
-    background-color: transparent;
-    transition: background-color 0.3s, color 0.3s;
+    color: #424446;
+    transition: 0.3s;
     box-sizing: border-box;
     padding: 10px;
     border-radius: 5px;
 }
 
 .menu-items a:hover {
-    background-color: #C3C5C7;
-    color: #424446;
-    border-radius: 5px;
+    color: #747a7e;
 }
 
 /* Burger-icon styles - open */
@@ -74,10 +74,9 @@ nav {
     position: absolute;
     top: 50px;
     right: 0;
-    background-color: #424446;
+    background-color: #C3C5C7;
     padding: 10px 30px;
-    z-index: 1;
-    margin-top: 0;
+    margin-top: 10px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
 }
@@ -89,7 +88,7 @@ nav {
 
 /* Mobile link's styles */
 .custom-navbar.open .menu-items a {
-    color: #C3C5C7;
+    color: #424446;
 }
 
 /* Media query - mobile */
@@ -114,14 +113,14 @@ nav {
 
 /* 813 logo */
 .logo {
-    height: 25px;
-    width: 25px;
+    height: 40px;
+    width: auto;
     padding: 10px;
     margin-top: 5px;
 }
 
 .icon {
-    padding-right: 5px;
+    padding-right: 15px;
     height: 25px;
     width: 25px;
 }
