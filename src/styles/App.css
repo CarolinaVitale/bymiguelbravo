@@ -4,7 +4,7 @@ nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
 }
 
 .logo-3d {
-  max-width: 60%;
+  max-width: 45%;
   opacity: 0.5;
   position: absolute;
   top: 40%;
@@ -302,9 +302,9 @@ nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
     margin: 60px;
   }
 
-    .social {
-      margin-top: 40px;
-    }
+  .social {
+    margin-top: 40px;
+  }
 }
 
 
