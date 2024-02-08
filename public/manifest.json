@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "by Miguel Bravo",
+  "name": "by Miguel Bravo",
+  "homepage":"https://bymiguelbravo.com",
   "icons": [
     {
       "src": "favicon.ico",

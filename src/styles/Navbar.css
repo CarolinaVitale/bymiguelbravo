@@ -1,126 +1,87 @@
-/* 
-COLORS
-dark-gray: #424446
-light-gray: #C3C5C7
-mustard: #cb952b
-*/
+/* Navbar.css */
 
 
-nav {
-    font-family: Courier, sans-serif;
-    
-}
-.custom-navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: transparent;
-    border: none;
-    box-shadow: none;
-    color: #424446;
-    padding: 5px;
-    margin: 0;
+
+.navbar {
+    font-family: 'Calibre-Bold', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    letter-spacing: 0.2em;
+    font-size: small;
+    margin-bottom: 0 !important;
+    padding: 0 !important;
 }
 
-.left-section {
-    display: flex;
-    align-items: center;
+
+
+.mb-3 {
+    margin-bottom: 0 !important;
 }
 
-.right-section {
-    display: flex;
-    align-items: center;
-}
 
-.menu-toggle {
-    display: block;
-    color: #424446;
-    font-size: 24px;
-    cursor: pointer;
-}
 
-.menu-items {
-    list-style: none;
-    display: flex;
-    margin: 0;
-}
-
-.menu-items li {
-    margin-right: 20px;
-}
-
-.menu-items a {
-    text-decoration: none;
-    color: #424446;
-    transition: 0.3s;
-    box-sizing: border-box;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.menu-items a:hover {
-    color: #747a7e;
-}
-
-/* Burger-icon styles - open */
-.custom-navbar.open .menu-toggle {
-    display: block;
-}
-
-/* Mobile list's style - open */
-.custom-navbar.open .menu-items {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    background-color: #C3C5C7;
-    padding: 10px 30px;
-    margin-top: 10px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-
-/* Mobile list's styles */
-.custom-navbar.open .menu-items li {
-    margin: 10px;
-}
-
-/* Mobile link's styles */
-.custom-navbar.open .menu-items a {
-    color: #424446;
-}
-
-/* Media query - mobile */
-@media (max-width: 768px) {
-
-    .right-section .menu-items {
-        display: none;
-    }
-
-    .menu-toggle {
-        display: block;
-        margin-top: 5px;
-    }
-}
-
-/* Media query - desktop */
-@media (min-width: 768px) {
-    .menu-toggle {
-        display: none;
-    }
-}
-
-/* 813 logo */
 .logo {
-    height: 40px;
+    height: 60px;
     width: auto;
-    padding: 10px;
     margin-top: 5px;
 }
 
-.icon {
-    padding-right: 15px;
-    height: 25px;
-    width: 25px;
+
+
+.logo1 {
+    max-width: 50px;
+}
+
+
+
+@media (max-width: 767px) {
+    .logo2 {
+        display: none;
+    }
+}
+
+
+
+.logo2 {
+    max-width: 150px;
+    margin-left: 10px;
+}
+
+
+
+/* Estilos para el subrayado animado */
+
+.navbar a {
+    position: relative;
+    text-decoration: none;
+    color: #242424;
+    /* Color del texto */
+}
+
+.links{
+    margin-left: 25px;
+}
+
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #242424;
+    /* Grosor del subrayado */
+    background-color: #242424;
+    /* Color del subrayado */
+    transform: scaleX(0);
+    /* Inicialmente no visible */
+    transform-origin: left;
+    /* Punto de origen a la izquierda para el efecto de animación */
+    transition: transform 0.3s ease;
+    /* Transición de animación */
+}
+
+
+
+.navbar a:hover::before {
+    transform: scaleX(1);
+    /* Aparece con la animación de izquierda a derecha al hacer hover */
 }

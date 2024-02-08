@@ -1,85 +1,333 @@
-.App {
-  text-align: center;
+/*  N A V B A R  */
+nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
+  margin-bottom: 0 !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.container {
+.logo-3d {
+  max-width: 60%;
+  opacity: 0.5;
   position: absolute;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+  top: 40%;
+  left: 55%;
+  transform: translate(-50%, -50%);
 }
 
-.background {
+@media (max-width: 767px) {
+  .logo-3d {
+    max-width: 50%;
+    opacity: 0.5;
+    top: 10%;
+    left: 54%;
+    transform: translateX(-50%);
+  }
+}
+
+/*  E N D   N A V B A R  */
+
+/*  C A R O U S E L  */
+.carousel {
+  height: 90%;
   width: 100%;
-  height: 100%;
+}
+
+.carousel img {
   object-fit: cover;
+  width: 100%;
+  height: 90vh;
 }
 
-
-
-@media (max-width: 768px) {
-  .container {
-    background-size: contain;
+@media (max-width: 767px) {
+  .carousel {
+    height: 50%;
   }
 
-  .logo-3d {
-    max-width: 60%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+  .carousel img {
+    height: 50%;
   }
 }
 
-@media (min-width: 768px) {
-  .container {
-    background-size: contain;
-  }
+/*  E N D  C A R O U S E L  */
 
-  .logo-3d {
-    max-width: 30%;
-    position: absolute;
-    top: 50%;
+
+/*  B U T T O N S  */
+.contact-button {
+  font-family: 'Calibre-Bold', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  letter-spacing: 0.2em;
+  font-size: small;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  background-color: rgba(35, 35, 35, 0.4);
+  box-shadow: 0 0 5px rgba(111, 111, 111, 0.3);
+  padding: 20px 40px;
+  border-radius: 1.5px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: border-color 0, 3s ease, color 0, 3 ease, background-color 0, 3 ease;
+}
+
+.contact-button:hover {
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  background-color: transparent;
+  box-shadow: 0 0 5px rgba(111, 111, 111, 0.3);
+}
+
+@media (max-width: 767px) {
+  .contact-button {
+    border: 2px solid lightgrey;
+    color: lightgrey;
+    background-color: rgba(35, 35, 35, 0.4);
+    box-shadow: 0 0 5px rgba(111, 111, 111, 0.3);
+    font-size: x-small;
+    size: 10px;
+    padding: 10px 20px;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 }
+
+/*  E N D   B U T T O N S  */
+
+
+/*  P R O G R A M  */
+.program h1 {
+  padding: 10px 10px 10px;
+  text-align: center;
+}
+
+.program p {
+  padding: 10px 10px 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.program {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+/*  E N D  P R O G R A M  */
+
+
+/*  M E D I A  */
+.media {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(40, 40, 40);
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.media img {
+  max-width: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/*  E N D  M E D I A  */
+
+
+/*  F O O T E R  */
+.footer {
+  display: block;
+  justify-content: center;
+  background-color: rgb(40, 40, 40);
+  padding-bottom: 30px;
+}
+
+.footer p {
+  color: lightgrey;
+  font-size: xx-small;
+  text-align: center;
+}
+
+.footer .location img {
+  max-width: 10px;
+  height: 100%;
+}
+
+.location p {
+  padding-left: 25px;
+  padding-bottom: 20px;
+  font-size: small;
+}
+
+
+.location {
+  display: flex;
+  justify-content: center;
+}
+
+/*  E N D  F O O T E R  */
+
+
+/*   S E R V I C E S   */
+
+.service-carousel h2 {
+  margin-top: 20px;
+  text-align: center;
+  color: rgb(122, 119, 119);
+}
+
+@media (min-width: 768px) {
+  .container-services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .service-carousel {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+    width: 400px;
+
+  }
+
+  .service-carousel img {
+    height: 70vh;
+    width: 400px;
+    object-fit: cover;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .container-services {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service-carousel {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .service-carousel img {
+    height: 80vh;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+
+.service-button {
+  font-family: 'Calibre-Bold', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  letter-spacing: 0.2em;
+  font-size: small;
+  border: 2px solid rgb(159, 157, 157);
+  color: rgb(122, 119, 119);
+  box-shadow: 0 0 5px rgba(111, 111, 111, 0.3);
+  padding: 10px 20px;
+  border-radius: 1.5px;
+  transition: border-color 0, 3s ease, color 0, 3 ease, background-color 0, 3 ease;
+}
+
+.service-button:hover {
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  background-color: transparent;
+  box-shadow: 0 0 5px rgba(111, 111, 111, 0.3);
+}
+
+.more-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 50px;
+}
+
+.more-info h4 {
+  margin-top: 20px;
+  margin-bottom: 40px;
+
+}
+
+/*   E N D  S E R V I C E S   */
+
+
+/*   C O N T A C T   */
+
+.social-button {
+  font-family: 'Calibre-Bold', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  letter-spacing: 0.2em;
+  font-size: small;
+  font-weight: 600;
+  border: 2px solid lightgrey;
+  color: rgb(42, 42, 42);
+  box-shadow: 0 0 5px rgba(111, 111, 111, 0.3);
+  padding: 20px 40px;
+  border-radius: 1.5px;
+  transition: border-color 0, 3s ease, color 0, 3 ease, background-color 0, 3 ease;
+}
+
+.social-button:hover {
+  border: 2px solid lightgrey;
+  color: rgb(42, 42, 42);
+  background-color: transparent;
+  box-shadow: 0 0 5px rgba(111, 111, 111, 0.3);
+}
+
+.contact-container {
+  margin-top: 20px;
+  margin: 30px;
+  text-align: center;
+}
+
+
+
+@media (min-width: 768px) {
+  .horarios {
+    display: flex;
+    justify-content: center;
+  }
+
+  .days {
+    margin-right: 40px;
+  }
+
+  .social a {
+    margin: 60px;
+  }
+
+    .social {
+      margin-top: 40px;
+    }
+}
+
+
+@media (max-width: 767px) {
+  .horarios {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .social-button {
+    font-weight: 600;
+    border: 2px solid lightgrey;
+    size: 10px;
+    padding: 10px 20px;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .social {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+/*   E N D   C O N T A C T   */
