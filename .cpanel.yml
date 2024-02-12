@@ -1,4 +1,5 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/example/public_html/
+    - export DEPLOYPATH=/home4/eccwogmy/repositories/bymiguelbravo/public_html/
+    - npm run build
     - /bin/cp -R ./build/* $DEPLOYPATH
