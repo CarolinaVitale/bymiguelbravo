@@ -1,10 +1,10 @@
-import React from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-import CarouselItem from 'react-bootstrap/CarouselItem'
+import React from "react";
+import Carousel from "react-bootstrap/Carousel";
+import CarouselItem from "react-bootstrap/CarouselItem";
 
-import image1 from '../images/carousel1.JPG'
-import image2 from '../images/carousel2.JPG'
-import image3 from '../images/carousel3.JPG'
+import image1 from "../images/carousel1.JPG";
+import image2 from "../images/carousel2.JPG";
+import image3 from "../images/carousel3.JPG";
 
 
 function Slide () {

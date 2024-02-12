@@ -1,6 +1,6 @@
-import React from 'react';
-import pin from '../images/pin.png'
-import '../styles/App.css';
+import React from "react";
+import pin from "../images/pin.png";
+import "../styles/App.css";
 
 function Footer () {
     return (

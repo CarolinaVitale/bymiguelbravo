@@ -1,6 +1,6 @@
-import React from 'react';
-import '../styles/About.css';
-import miguel2 from '../images/miguel-bravo2.JPG'
+import React from "react";
+import "../styles/About.css";
+import miguel2 from "../images/miguel-bravo2.JPG";
 
 function About() {
     return (

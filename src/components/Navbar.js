@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import Offcanvas from 'react-bootstrap/Offcanvas';
-import logo from '../images/logo.png';
-import logo2 from '../images/horizontal-logotype.png';
-import '../styles/Navbar.css';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import Offcanvas from "react-bootstrap/Offcanvas";
+import logo from "../images/logo.png";
+import logo2 from "../images/horizontal-logotype.png";
+import "../styles/Navbar.css";
+import { Link, useNavigate } from "react-router-dom";
 
 
 function NavbarOff() {
@@ -22,7 +22,7 @@ function NavbarOff() {
 
     return (
         <>
-            {['sm'].map((expand) => (
+            {["sm"].map((expand) => (
                 <Navbar key={expand} expand={expand} className="navbar bg-body-tertiary mb-3">
                     <Container fluid>
                         <Navbar.Brand as={Link} to='/' onClick={closeNav}>
@@ -42,8 +42,8 @@ function NavbarOff() {
 
                                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
 
-                                    <Nav.Link className='links' as={Link} to="/" onClick={() => { closeNav(); navigate('/'); }}>
-                                        <img src={logo2} style={{ maxWidth: '150px' }} alt='logo'></img>
+                                    <Nav.Link className='links' as={Link} to="/" onClick={() => { closeNav(); navigate("/"); }}>
+                                        <img src={logo2} style={{ maxWidth: "150px" }} alt='logo'></img>
                                     </Nav.Link>
 
                                 </Offcanvas.Title>
@@ -54,9 +54,9 @@ function NavbarOff() {
 
                                 <Nav className="justify-content-end flex-grow-1 pe-3">
                                     
-                                    <Nav.Link className='links' as={Link} to="/sobremi" onClick={() => { closeNav(); navigate('/sobremi'); }}>Sobre mi</Nav.Link>
-                                    <Nav.Link className='links' as={Link} to="/servicios" onClick={() => { closeNav(); navigate('/servicios'); }}>Servicios</Nav.Link>
-                                    <Nav.Link className='links' as={Link} to="/contacto" onClick={() => { closeNav(); navigate('/contacto'); }}>Contáctanos</Nav.Link>
+                                    <Nav.Link className='links' as={Link} to="/sobremi" onClick={() => { closeNav(); navigate("/sobremi"); }}>Sobre mi</Nav.Link>
+                                    <Nav.Link className='links' as={Link} to="/servicios" onClick={() => { closeNav(); navigate("/servicios"); }}>Servicios</Nav.Link>
+                                    <Nav.Link className='links' as={Link} to="/contacto" onClick={() => { closeNav(); navigate("/contacto"); }}>Contáctanos</Nav.Link>
 
                                 </Nav>
 
