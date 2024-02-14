@@ -25,26 +25,23 @@
 }
 
 
-
 .logo1 {
     max-width: 50px;
 }
 
 
-
 @media (max-width: 767px) {
     .logo2 {
-        display: none;
+        display: inline;
+        vertical-align: middle;
+        margin-right: 10px;
     }
 }
 
 
-
 .logo2 {
     max-width: 150px;
-    margin-left: 10px;
 }
-
 
 
 /* Estilos para el subrayado animado */

@@ -1,31 +1,30 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import "../styles/App.css";
-import pic from "../images/ch-1.JPG";
-import pic2 from "../images/ch2.JPG";
-import pic3 from "../images/ch3.JPG";
-import pic4 from "../images/ch-4.JPG";
-import pic5 from "../images/ch-5.JPG";
-import pic6 from "../images/ch-6.JPG";
-import pic7 from "../images/ch-7.JPG";
-import pic8 from "../images/ch-8.JPG";
-import pic9 from "../images/ch-9.JPG";
+import pic from "../images/ch-1.jpeg";
+import pic2 from "../images/ch2.jpeg";
+import pic3 from "../images/ch3.jpeg";
+import pic4 from "../images/ch-4.jpeg";
+import pic5 from "../images/ch-5.jpeg";
+import pic6 from "../images/ch-6.jpeg";
+import pic7 from "../images/ch-7.jpeg";
+import pic8 from "../images/ch-8.jpeg";
+import pic9 from "../images/ch-9.jpeg";
 
-import ceviche from "../images/ceviche.JPG";
-import ceviche2 from "../images/ceviche2.JPG";
+import ceviche from "../images/ceviche.jpeg";
+import ceviche2 from "../images/ceviche2.jpeg";
 
-import italia from "../images/italian.JPG";
-import italia2 from "../images/italian2.JPG";
-import italia3 from "../images/italian3.JPG";
-import italia4 from "../images/italian4.JPG";
-import italia5 from "../images/italian5.JPG";
+import italia from "../images/italian.jpeg";
+import italia3 from "../images/italian3.jpeg";
+import italia4 from "../images/italian4.jpeg";
+import italia5 from "../images/italian5.jpeg";
 
-import catering from "../images/catering.jpg";
-import catering2 from "../images/catering2.jpg";
-import catering3 from "../images/catering3.jpg";
-import catering4 from "../images/catering4.jpg";
-import catering5 from "../images/catering5.JPG";
-import catering6 from "../images/catering6.JPG";
+import catering from "../images/catering.jpeg";
+import catering2 from "../images/catering2.jpeg";
+import catering3 from "../images/catering3.jpeg";
+import catering4 from "../images/catering4.jpeg";
+import catering5 from "../images/catering5.jpeg";
+import catering6 from "../images/catering6.jpeg";
 
 
 function Services() {
@@ -153,13 +152,6 @@ function Services() {
                         <img src={italia} alt='italian'></img>
                         <Carousel.Caption>
                             <h3>LASAGNA</h3>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-
-                    <Carousel.Item>
-                        <img src={italia2} alt='italian'></img>
-                        <Carousel.Caption>
-                            <h3>TORTELLINI</h3>
                         </Carousel.Caption>
                     </Carousel.Item>
 

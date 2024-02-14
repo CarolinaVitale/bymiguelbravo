@@ -27,8 +27,12 @@ function NavbarOff() {
                     <Container fluid>
                         <Navbar.Brand as={Link} to='/' onClick={closeNav}>
                             <img className='logo1' src={logo} alt='logo'></img>
-                            <img className='logo2' src={logo2} alt='logo'></img>
                         </Navbar.Brand>
+
+                        <Nav.Link as={Link} to="/" onClick={() => { closeNav(); navigate("/"); }}>
+                            <img className='logo2' src={logo2} style={{ maxWidth: "150px" }} alt='logo'></img>
+                        </Nav.Link>
+
                         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} onClick={() => setShow(!show)} />
                         <Navbar.Offcanvas
                             show={show}
