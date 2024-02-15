@@ -23,9 +23,9 @@ function Popup () {
                 <h1>POP-UP DINNER</h1>
                 <br />
             </div>
+            
             <div className='pop-up-dinner'>
-                
-                
+            
                 <p>
                     Una POP-UP DINNER es un evento culinario efímero y exclusivo que ofrece una experiencia gastronómica única.
                 </p>
