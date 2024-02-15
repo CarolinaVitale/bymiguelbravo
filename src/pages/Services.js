@@ -20,7 +20,7 @@ import italia4 from "../images/italian4.jpeg";
 import italia5 from "../images/italian5.jpeg";
 
 import catering from "../images/catering.jpeg";
-import catering2 from "../images/catering2.jpeg";
+import catering2 from "../images/catering2.jpg";
 import catering3 from "../images/catering3.jpeg";
 import catering4 from "../images/catering4.jpeg";
 import catering5 from "../images/catering5.jpeg";
@@ -182,13 +182,13 @@ function Services() {
         
         </div>
             <div className='more-info'>
-            <h4>Para más información</h4>
+                <h4>Para más información</h4>
     
                 <a href='https://wa.me/message/26GNQXJCZ3VVM1' target='_blank' rel="noreferrer">
                     <button href='' className='service-button'>Comunícate a través de Whatsapp</button>
                 </a>
         
-        </div>
+            </div>
         
         </div>
     );

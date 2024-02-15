@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Media from "./components/Instagram";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Popup from "./pages/Popup";
 
 
 function App() {
@@ -23,7 +24,8 @@ function App() {
             <Route path="/servicios" element={<Services />} />
             <Route path="/sobremi" element={<About />} />  
             <Route path="/contacto" element={<Contact />} /> 
-            {/* Agrega más rutas según sea necesario */}
+            <Route path="/popupdinner" element={<Popup />} />  
+            
           </Routes>
           
         <Media />

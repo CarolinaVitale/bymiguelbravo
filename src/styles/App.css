@@ -118,7 +118,7 @@ nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
 
 /*  M E D I A  */
 .media {
-  margin-top: 50px;
+  padding-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -247,6 +247,7 @@ nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
   justify-content: center;
   text-align: center;
   margin: 50px;
+  margin-bottom: 100px;
 }
 
 .more-info h4 {
@@ -284,6 +285,7 @@ nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
   margin-top: 20px;
   margin: 30px;
   text-align: center;
+  margin-bottom: 60px;
 }
 
 
