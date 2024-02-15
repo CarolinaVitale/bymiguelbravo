@@ -15,6 +15,10 @@ function PopupDinner() {
                 <img className='pop-up-pic' src={popup} alt='miguel'></img>
             </div>
 
+            <a href='/popupdinner'>
+                <button href='' className='social-button'>Conoce más</button>
+            </a>
+            
             <Link to="/popupdinner">
                 <button href='' className='social-button'>Conoce más</button>
             </Link>

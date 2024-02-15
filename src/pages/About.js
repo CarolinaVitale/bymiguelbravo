@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/About.css";
+import "../styles/App.css";
 import miguel2 from "../images/miguel-bravo2.jpeg";
 
 function About() {
