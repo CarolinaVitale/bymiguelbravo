@@ -1,3 +1,8 @@
+body {
+  max-width: 100%;
+    overflow-x: hidden;
+}
+
 /*  N A V B A R  */
 nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
   margin-bottom: 0 !important;
