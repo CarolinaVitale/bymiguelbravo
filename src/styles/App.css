@@ -54,7 +54,7 @@ nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
 /*  E N D  C A R O U S E L  */
 
 
-/*  B U T T O N S  */
+/*  B U T T O N S  C A R O U S E L  */
 .contact-button {
   font-family: 'Calibre-Bold', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   letter-spacing: 0.2em;
@@ -176,11 +176,9 @@ nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
 
 
 /*   S E R V I C E S   */
-
 .service-carousel h2 {
   margin-top: 20px;
   text-align: center;
-  color: rgb(122, 119, 119);
 }
 
 @media (min-width: 768px) {
@@ -226,26 +224,6 @@ nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
   }
 }
 
-
-.service-button {
-  font-family: 'Calibre-Bold', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-  letter-spacing: 0.2em;
-  font-size: small;
-  border: 2px solid rgb(159, 157, 157);
-  color: rgb(122, 119, 119);
-  box-shadow: 0 0 5px rgba(111, 111, 111, 0.3);
-  padding: 10px 20px;
-  border-radius: 1.5px;
-  transition: border-color 0, 3s ease, color 0, 3 ease, background-color 0, 3 ease;
-}
-
-.service-button:hover {
-  border: 2px solid lightgrey;
-  color: lightgrey;
-  background-color: transparent;
-  box-shadow: 0 0 5px rgba(111, 111, 111, 0.3);
-}
-
 .more-info {
   display: flex;
   flex-direction: column;
@@ -265,25 +243,25 @@ nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
 
 
 /*   C O N T A C T   */
-
-.social-button {
+.button-social {
+  margin-top: 40px;
   font-family: 'Calibre-Bold', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   letter-spacing: 0.2em;
   font-size: small;
-  font-weight: 600;
-  border: 2px solid lightgrey;
-  color: rgb(42, 42, 42);
-  box-shadow: 0 0 5px rgba(111, 111, 111, 0.3);
-  padding: 20px 40px;
-  border-radius: 1.5px;
-  transition: border-color 0, 3s ease, color 0, 3 ease, background-color 0, 3 ease;
-}
-
-.social-button:hover {
-  border: 2px solid lightgrey;
-  color: rgb(42, 42, 42);
+  display: inline-block;
+  padding: 15px 60px;
+  border: 2px solid #444;
+  border-radius: 1px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  color: #444;
   background-color: transparent;
-  box-shadow: 0 0 5px rgba(111, 111, 111, 0.3);
+
+  &:hover {
+    background-color: #444;
+    color: white;
+  }
 }
 
 .contact-container {
@@ -292,8 +270,6 @@ nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
   text-align: center;
   margin-bottom: 60px;
 }
-
-
 
 @media (min-width: 768px) {
   .horarios {
@@ -314,20 +290,14 @@ nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
   }
 }
 
-
 @media (max-width: 767px) {
   .horarios {
     display: flex;
     justify-content: space-between;
   }
 
-  .social-button {
-    font-weight: 600;
-    border: 2px solid lightgrey;
-    size: 10px;
-    padding: 10px 20px;
+  .button-social {
     width: 100%;
-    margin-top: 20px;
   }
 
   .social {

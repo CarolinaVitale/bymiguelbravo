@@ -33,15 +33,15 @@ function Contact () {
             <div className='social'>
                 <br />
                 <a href='https://wa.me/message/26GNQXJCZ3VVM1' target='_blank' rel="noreferrer">
-                    <button href='' className='social-button'>Whatsapp</button>
+                    <button href='' className='button-social'>Whatsapp</button>
                 </a>
                 
                 <a href='https://www.instagram.com/chefbravovera/?igsh=MW1rbWJvNW5veDgyag%3D%3D&utm_source=qr' target='_blank' rel="noreferrer">
-                    <button href='' className='social-button'>Instagram</button>                
+                    <button href='' className='button-social'>Instagram</button>                
                 </a>
                 
                 <a href='https://www.linkedin.com/in/miguelbravovera/' target='_blank' rel="noreferrer">
-                    <button href='' className='social-button'>Linkedin</button>
+                    <button href='' className='button-social'>Linkedin</button>
                 </a>
             </div>
         </div>

@@ -185,7 +185,7 @@ function Services() {
                 <h4>Para más información</h4>
     
                 <a href='https://wa.me/message/26GNQXJCZ3VVM1' target='_blank' rel="noreferrer">
-                    <button href='' className='service-button'>Comunícate a través de Whatsapp</button>
+                    <button href='' className='button'>Comunícate a través de Whatsapp</button>
                 </a>
         
             </div>

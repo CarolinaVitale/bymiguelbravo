@@ -61,7 +61,7 @@
     width: 100%;
 }
 
-/* C O M P O N E N T POP-UP-DINNER */
+/* C O M P O N E N T      P O P - U P - D I N N E R */
 
 .popup-div {
     text-align: center;
@@ -71,18 +71,25 @@
     padding-top: 60px;
 }
 
-@media (min-width: 768px) {
-    .popup-div .social-button {
-        margin-top: 60px;
-        background-color: whitesmoke;
-    }
+.button {
+    margin-top: 40px;
+    font-family: 'Calibre-Bold', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    letter-spacing: 0.2em;
+    font-size: small;
+    display: inline-block;
+    padding: 15px 60px;
+    border: 2px solid #444;
+    border-radius: 1px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    color: #444;
+    background-color: transparent;
 
-        .social-button:hover {
-            border: 2px solid lightgrey;
-            color: rgb(122, 120, 120);
-            background-color: transparent;
-            box-shadow: 0 0 5px rgba(111, 111, 111, 0.3);
-        }
+    &:hover {
+        background-color: #444;
+        color: white;
+    }
 }
 
-
+/*  E N D     C O M P O N E N T      P O P - U P - D I N N E R */
