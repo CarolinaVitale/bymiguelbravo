@@ -310,6 +310,48 @@ nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
 /*   E N D   C O N T A C T   */
 
 /*   A B O U T   */
+
+/*   T Y P I N G   */
+.wrapper {
+  /*This part is important for centering*/
+  display: grid;
+  place-items: center;
+}
+
+.typing-demo {
+  width: 28ch;
+  animation: typing 3s steps(24), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@media (max-width:767px) {
+  .typing-demo {
+    width: 32ch;
+    font-size: 1em;
+    font-weight: bold;
+    
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+/*   T Y P I N G   E N D    */
+
+
 .container-pic {
   display: flex;
   justify-content: center;
