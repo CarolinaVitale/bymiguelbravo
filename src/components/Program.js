@@ -3,8 +3,11 @@ import React from "react";
 function Program() {
     return (
         <div className='program'>
-            <h1>PROGRAMACIÓN ACTUAL</h1>
-            <p>En este momento estamos trabajando bajo pedido.</p>
+            <div className="wrapper2">
+                <div className="typing-demo2">
+                    by Miguel Bravo
+                </div>
+            </div>
         </div>
     );
 }
