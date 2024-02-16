@@ -5,6 +5,7 @@ import miguel2 from "../images/miguel-bravo2.jpeg";
 
 
 function About() {
+    
     const [isLoading, setIsLoading] = useState(true); 
     const handleImageLoad = () => {
         setIsLoading(false); 

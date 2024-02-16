@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "../styles/Popupdinner.css";
 import popup from "../images/catering4.jpeg";
 import popup2 from "../images/carousel1.jpg";
@@ -11,14 +11,21 @@ import popup9 from "../images/popupdinner.jpg";
 import popup10 from "../images/popupdinner2.jpg";
 import popup11 from "../images/popupdinner3.jpg";
 import popup12 from "../images/popupdinner4.jpg";
-
+import Spinner from "../components/Spinner";
 
 
 function Popup () {
+
+    const [isLoading, setIsLoading] = useState(true);
+    const handleImageLoad = () => {
+        setIsLoading(false);
+    };
+
     return (
-<div>
+        <div>
+            {isLoading && <Spinner />}
             <div className='top-container'>
-                <img className='pop-up-top' src={popup12} alt='miguel'></img>
+                <img className='pop-up-top' src={popup12} alt='miguel' onLoad={handleImageLoad}></img>
                 <br />
                 <h1>POP-UP DINNER</h1>
                 <br />
