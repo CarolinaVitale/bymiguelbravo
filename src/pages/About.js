@@ -16,10 +16,11 @@ function About() {
         <div className='about-info'>
             {isLoading && <Spinner />}
 
-            <div className='container-pic'>
-                <img className='about-pic' src={miguel2} alt='miguel' onLoad={handleImageLoad}></img>
+            <div className='image-container'>
+                <img className='about-image' src={miguel2} alt='miguel' onLoad={handleImageLoad}></img>
             </div>
             <br />
+
             <div className="wrapper">
                 <div className="typing-demo">
                     Hola!, soy Miguel Bravo.
