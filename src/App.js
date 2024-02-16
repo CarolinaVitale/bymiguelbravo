@@ -10,6 +10,7 @@ import Media from "./components/Instagram";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Popup from "./pages/Popup";
+import ScrollToTopOnMount from "./components/ScrollToTopOnMount";
 
 
 function App() {
@@ -17,18 +18,21 @@ function App() {
   return (
 
     <Router>
+      
+      <ScrollToTopOnMount />
+
       <NavbarOff />
 
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/servicios" element={<Services />} />
-            <Route path="/sobremi" element={<About />} />  
-            <Route path="/contacto" element={<Contact />} /> 
-            <Route path="/popupdinner" element={<Popup />} />  
-            
-          </Routes>
-          
-        <Media />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/servicios" element={<Services />} />
+        <Route path="/sobremi" element={<About />} />
+        <Route path="/contacto" element={<Contact />} />
+        <Route path="/popupdinner" element={<Popup />} />
+
+      </Routes>
+
+      <Media />
       <Footer />
     </Router>
 
