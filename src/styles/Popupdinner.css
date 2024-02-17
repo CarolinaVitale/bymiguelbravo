@@ -1,5 +1,8 @@
 .pop-up-dinner p {
     text-align: justify;
+    color: #444;
+    font-family: 'Calibre-Bold', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    letter-spacing: 0.2em;
 }
 
 .pop-up-dinner{
@@ -10,6 +13,9 @@
     text-align: center;
     margin-bottom: 40px;
     margin-top: 60px;
+    color: #444;
+        font-family: 'Calibre-Bold', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+        letter-spacing: 0.2em;
 }
 
 .pop-up-container {
@@ -65,8 +71,6 @@
 
 .popup-div {
     text-align: center;
-    padding: 20px;
-    background-color: rgb(241, 241, 241);;
     padding-bottom: 60px;
     padding-top: 60px;
 }
@@ -90,6 +94,12 @@
         background-color: #444;
         color: white;
     }
+}
+
+.pop-h {
+    color: #444;
+    font-family: 'Calibre-Bold', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    letter-spacing: 0.2em;
 }
 
 /*  E N D     C O M P O N E N T      P O P - U P - D I N N E R */

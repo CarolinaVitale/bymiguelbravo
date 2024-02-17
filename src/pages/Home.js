@@ -4,10 +4,6 @@ import logo3D from "../images/logotype-3d.png";
 import Slide from "../components/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Program from "../components/Program";
-import Popupdinner from "../components/Popupdinner";
-
-
-
 
 
 function Home() {
@@ -25,8 +21,6 @@ function Home() {
             </a>
 
             <Program />
-
-            <Popupdinner />
 
         </div>
 

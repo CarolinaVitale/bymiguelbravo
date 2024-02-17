@@ -3,7 +3,6 @@ body {
   overflow-x: hidden;
 }
 
-
 /*  N A V B A R  */
 nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
   margin-bottom: 0 !important;
@@ -97,50 +96,6 @@ nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
 }
 
 /*  E N D   B U T T O N S  */
-
-
-/*  P R O G R A M  */
-
-/*   T Y P I N G   */
-.wrapper2 {
-  /*This part is important for centering*/
-  display: grid;
-  place-items: center;
-}
-
-.typing-demo2 {
-  width: 16.8ch;
-  animation: typing 2s steps(15), blink .5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  font-family: monospace;
-  font-size: 3em;
-}
-
-/*   T Y P I N G   */
-
-.program h1 {
-  padding: 10px 10px 10px;
-  text-align: center;
-}
-
-.program p {
-  padding: 10px 10px 10px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.program {
-  display: block;
-  justify-content: center;
-  align-items: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
-
-/*  E N D  P R O G R A M  */
 
 
 /*  M E D I A  */
