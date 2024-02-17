@@ -23,13 +23,13 @@ function Popup () {
 
     return (
         <div>
-            <div className='top-container'>
+            <div className='top-container spinner-box'>
                 <img className='pop-up-top' src={popup12} alt='miguel' onLoad={handleImageLoad}></img>
                 {isLoading && <Spinner />}
             </div>
             
             <div className='pop-up-dinner'>
-                <br />
+                <div className="divider"></div>
                 <h1>POP-UP DINNER</h1>
                 <br />
                 <p>

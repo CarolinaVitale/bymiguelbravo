@@ -5,7 +5,7 @@ import "../styles/App.css";
 function Spinner() {
 
     return (
-        <div className="spinner .spinner--display"></div>
+        <div className="spinner spinner--display"></div>
     );
 
 }
