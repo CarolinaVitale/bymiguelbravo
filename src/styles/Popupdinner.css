@@ -14,13 +14,14 @@
     margin-bottom: 40px;
     margin-top: 60px;
     color: #444;
-        font-family: 'Calibre-Bold', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-        letter-spacing: 0.2em;
+    font-family: 'Calibre-Bold', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    letter-spacing: 0.2em;
 }
 
 .pop-up-container {
     display: flex;
     justify-content: center;
+    border: 1px solid transparent
 }
 
 /* desktop */
@@ -65,6 +66,10 @@
 
 .pop-up-top {
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 /* C O M P O N E N T      P O P - U P - D I N N E R */

@@ -23,22 +23,22 @@ function Popup () {
 
     return (
         <div>
-            {isLoading && <Spinner />}
             <div className='top-container'>
                 <img className='pop-up-top' src={popup12} alt='miguel' onLoad={handleImageLoad}></img>
-                <br />
-                <h1>POP-UP DINNER</h1>
-                <br />
+                {isLoading && <Spinner />}
             </div>
             
             <div className='pop-up-dinner'>
-            
+                <br />
+                <h1>POP-UP DINNER</h1>
+                <br />
                 <p>
                     Una POP-UP DINNER es un evento culinario efímero y exclusivo que ofrece una experiencia gastronómica única.
                 </p>
                 <br />
                 <div className='pop-up-container'>
-                    <img className='pop-up-pic' src={popup2} alt='miguel'></img>
+                    <img className='pop-up-pic' src={popup2} alt='miguel' onLoad={handleImageLoad}></img>
+                    {isLoading && <Spinner />}
                 </div>
                 <br />
                 <p>
@@ -46,7 +46,8 @@ function Popup () {
                 </p>
                 <br />
                 <div className='pop-up-container'>
-                    <img className='pop-up-pic' src={popup3} alt='miguel'></img>
+                    <img className='pop-up-pic' src={popup3} alt='miguel' onLoad={handleImageLoad}></img>
+                    {isLoading && <Spinner />}
                 </div>
                 <br />
                 <p>

@@ -15,10 +15,9 @@ function About() {
     return (
 
         <div className='about-info'>
-            {isLoading && <Spinner />}
-
             <div className='image-container'>
                 <img className='about-image' src={miguel2} alt='miguel' onLoad={handleImageLoad}></img>
+                {isLoading && <Spinner />}
             </div>
             <br />
 
