@@ -382,9 +382,6 @@ nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
   animation: spin 1s linear infinite;
   position: relative;
   display: inline-block;
-}
-
-.spinner-container {
   position: absolute;
   top: 50%;
   left: 50%;
