@@ -32,6 +32,7 @@ function Popup () {
             
             <div className='pop-up-dinner'>
                 <div className="divider"></div>
+                <br/>
                 <h1>POP-UP DINNER</h1>
                 <br />
                 <p>
