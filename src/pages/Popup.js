@@ -17,6 +17,8 @@ import Spinner from "../components/Spinner";
 function Popup () {
 
     const [isLoading, setIsLoading] = useState(true);
+
+
     const handleImageLoad = () => {
         setIsLoading(false);
     };

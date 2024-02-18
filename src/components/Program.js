@@ -6,7 +6,6 @@ import "../styles/Buttons.css";
 import popup from "../images/popupgif.gif";
 import "../styles/App.css";
 import Carousel from "react-bootstrap/Carousel";
-
 import catering from "../images/catering.jpeg";
 import catering2 from "../images/catering2.jpg";
 import catering3 from "../images/catering3.jpeg";
@@ -28,7 +27,6 @@ function Program() {
         <div className='program'>
             
             <Slider />
-            <div className="divider"></div>
             <div className="bio">
                 <div className="wrapper-program">
                     <div className="typing-demo-program">
@@ -43,8 +41,6 @@ function Program() {
                     <button className='grey-button'>Conoce más</button>
                 </Link>
             </div>
-
-            <div className="divider"></div>
 
             <div className="catering">
                 <h1 className="pop-h">¿Quiéres contratar nuestro servicio de Catering?</h1>
@@ -82,8 +78,6 @@ function Program() {
                     <button href='' className='grey-button'>Contáctanos</button>
                 </a>
             </div>
-
-            <div className="divider"></div>
 
             <div className='popup-div'>
                 <h1 className="pop-h">EVENTOS</h1>

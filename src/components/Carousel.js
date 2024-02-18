@@ -12,6 +12,8 @@ import Spinner from "../components/Spinner";
 function Slide () {
 
     const [isLoading, setIsLoading] = useState(true);
+
+
     const handleImageLoad = () => {
         setIsLoading(false);
     };
