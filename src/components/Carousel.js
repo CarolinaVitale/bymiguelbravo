@@ -17,22 +17,22 @@ function Slide () {
     };
 
     return (
-        <Carousel >
-            <CarouselItem interval={1500}>
-                <img src={image1} alt='Pop-up Dinner' onLoad={handleImageLoad}></img>
-                {isLoading && <Spinner />}
-            </CarouselItem>
+        <div>
+            <Carousel onLoad={handleImageLoad} >
+                <CarouselItem interval={1500}>
+                    <img src={image1} alt='Pop-up Dinner' ></img>
+                </CarouselItem>
 
-            <CarouselItem interval={1500}>
-                <img src={image2} alt='Pop-up Dinner' onLoad={handleImageLoad}></img>
-                {isLoading && <Spinner />}
-            </CarouselItem>
+                <CarouselItem interval={1500}>
+                    <img src={image2} alt='Pop-up Dinner' ></img>
+                </CarouselItem>
 
-            <CarouselItem interval={1500}>
-                <img src={image3} alt='Pop-up Dinner' onLoad={handleImageLoad}></img>
+                <CarouselItem interval={1500}>
+                    <img src={image3} alt='Pop-up Dinner' ></img>
+                </CarouselItem>
                 {isLoading && <Spinner />}
-            </CarouselItem>
-        </Carousel>
+            </Carousel>
+        </div>
     );
 }
 

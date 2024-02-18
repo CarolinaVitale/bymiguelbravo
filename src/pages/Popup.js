@@ -23,7 +23,7 @@ function Popup () {
 
     return (
         <div>
-            <div className='top-container spinner-box'>
+            <div className='top-container'>
                 <img className='pop-up-top' src={popup12} alt='miguel' onLoad={handleImageLoad}></img>
                 {isLoading && <Spinner />}
             </div>
@@ -55,7 +55,8 @@ function Popup () {
                 </p>
                 <br />
                 <div className='pop-up-container'>
-                    <img className='pop-up-pic' src={popup10} alt='miguel'></img>
+                    <img className='pop-up-pic' src={popup10} alt='miguel' onLoad={handleImageLoad}></img>
+                    {isLoading && <Spinner />}
                 </div>
                 <br />
                 <p>
@@ -63,39 +64,41 @@ function Popup () {
                 </p>
                 <br />
                 <div className='pop-up-container'>
-                    <img className='pop-up-pic' src={popup9} alt='miguel'></img>
+                    <img className='pop-up-pic' src={popup9} alt='miguel' onLoad={handleImageLoad}></img>
+                    {isLoading && <Spinner />}
                 </div>
 
                 <div className='pop-up-container'>
-                    <img className='pop-up-pic' src={popup} alt='miguel'></img>
+                    <img className='pop-up-pic' src={popup} alt='miguel' onLoad={handleImageLoad}></img>
+                    {isLoading && <Spinner />}
                 </div>
 
                 <div className='pop-up-container'>
-                    <img className='pop-up-pic' src={popup8} alt='miguel'></img>
+                    <img className='pop-up-pic' src={popup8} alt='miguel' onLoad={handleImageLoad}></img>
+                    {isLoading && <Spinner />}
                 </div>
 
                 <div className='pop-up-container'>
-                    <img className='pop-up-pic' src={popup5} alt='miguel'></img>
+                    <img className='pop-up-pic' src={popup5} alt='miguel' onLoad={handleImageLoad}></img>
+                    {isLoading && <Spinner />}
                 </div>
 
                 <div className='pop-up-container'>
-                    <img className='pop-up-pic' src={popup6} alt='miguel'></img>
+                    <img className='pop-up-pic' src={popup6} alt='miguel' onLoad={handleImageLoad}></img>
+                    {isLoading && <Spinner />}
                 </div>
 
                 <div className='pop-up-container'>
-                    <img className='pop-up-pic' src={popup7} alt='miguel'></img>
+                    <img className='pop-up-pic' src={popup7} alt='miguel' onLoad={handleImageLoad}></img>
+                    {isLoading && <Spinner />}
                 </div>
 
                 <div className='pop-up-container'>
-                    <img className='pop-up-pic' src={popup11} alt='miguel'></img>
+                    <img className='pop-up-pic' src={popup11} alt='miguel' onLoad={handleImageLoad}></img>
+                    {isLoading && <Spinner />}
                 </div>
-
-
             </div>
-
-</div>
-        
-
+        </div>    
     );
 }
 

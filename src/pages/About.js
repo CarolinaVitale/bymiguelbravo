@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import "../styles/App.css";
-import Spinner from "../components/Spinner"; 
 import miguel2 from "../images/miguel-bravo2.jpeg";
+import Spinner from "../components/Spinner";
 
 
 function About() {
-    
-    const [isLoading, setIsLoading] = useState(true); 
-    const handleImageLoad = () => {
-        setIsLoading(false); 
 
+    const [isLoading, setIsLoading] = useState(true);
+
+
+    const handleImageLoad = () => {
+        setIsLoading(false);
     };
 
     return (

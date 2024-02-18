@@ -57,8 +57,8 @@
 }
 
 .catering {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 200px;
+    padding-bottom: 200px;
     background-color: rgb(241, 241, 241);
 }
 
@@ -70,18 +70,14 @@
 }
 
 .bio {
-    padding-bottom: 100px;
+    padding-bottom: 200px;
+    padding-top: 200px;
 }
 
 /*   E N D T Y P I N G   */
 
 .divider {
-    width: 1px;
-    height: 100px;
-    background-color: #444;
-    margin: 0 auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    border-top: 12px dotted #c5c3c3;
 }
 
 .logo-h {
@@ -128,6 +124,7 @@
     height: auto;
     margin: auto;
     overflow: hidden;
+    margin-bottom: 20px;
 }
 
 .slide-container .slide-track {
@@ -151,12 +148,50 @@
         transform: translatex(0);
         webkit-transform: translatex(0);
     }
+
     100% {
         transform: translatex(calc(-200px * 7));
         webkit-transform: translatex(calc(-200px * 7));
     }
 }
 
-/*   R I B B O N  */
+/*   E N D     R I B B O N  */
 
+.popup-div {
+    text-align: center;
+    padding-bottom: 200px;
+    padding-top: 200px;
+}
 
+.button {
+    margin-top: 40px;
+    font-family: 'Calibre-Bold', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    letter-spacing: 0.2em;
+    font-size: small;
+    display: inline-block;
+    padding: 15px 60px;
+    border: 2px solid #444;
+    border-radius: 1px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    color: #444;
+    background-color: transparent;
+
+    &:hover {
+        background-color: #444;
+        color: white;
+    }
+}
+
+.pop-h {
+    color: #444;
+    font-family: 'Calibre-Bold', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    letter-spacing: 0.2em;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.pop-up-container {
+    margin-top: 50px;
+}

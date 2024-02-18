@@ -1,10 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import miguel from "../images/miguel-bravo.jpg";
 import "../styles/Program.css";
 import "../styles/Buttons.css";
 import popup from "../images/popupgif.gif";
-import "../styles/Popupdinner.css";
+import "../styles/App.css";
 import Carousel from "react-bootstrap/Carousel";
 
 import catering from "../images/catering.jpeg";
@@ -14,15 +14,21 @@ import catering4 from "../images/catering4.jpeg";
 import catering5 from "../images/catering5.jpeg";
 import catering6 from "../images/catering6.jpeg";
 import Slider from "./Slider";
+import Spinner from "./Spinner";
 
 
 function Program() {
+    const [isLoading, setIsLoading] = useState(true);
+
+    const handleImageLoad = () => {
+        setIsLoading(false);
+    };
+
     return (
         <div className='program'>
             
             <Slider />
             <div className="divider"></div>
-
             <div className="bio">
                 <div className="wrapper-program">
                     <div className="typing-demo-program">
@@ -30,7 +36,8 @@ function Program() {
                     </div>
                 </div>
                 <div className='pop-up-container'>
-                    <img className='pop-up-pic' src={miguel} alt='miguel'></img>
+                    <img className='pop-up-pic' src={miguel} alt='miguel' onLoad={handleImageLoad}></img>
+                    {isLoading && <Spinner />}
                 </div>
                 <Link to="/sobremi">
                     <button className='grey-button'>Conoce más</button>
@@ -43,7 +50,7 @@ function Program() {
                 <h1 className="pop-h">¿Quiéres contratar nuestro servicio de Catering?</h1>
 
                 <div className='program-carousel'>
-                    <Carousel slide={false}>
+                    <Carousel slide={false} onLoad={handleImageLoad}>
                         <Carousel.Item>
                             <img src={catering} alt='catering'></img>
                         </Carousel.Item>
@@ -67,6 +74,7 @@ function Program() {
                         <Carousel.Item>
                             <img src={catering6} alt='catering'></img>
                         </Carousel.Item>
+                        {isLoading && <Spinner />}
                     </Carousel>
                 </div>
 
@@ -83,7 +91,8 @@ function Program() {
                 <h2 className="pop-h">POP-UP DINNER</h2>
                 <br />
                 <div className='pop-up-container'>
-                    <img className='pop-up-pic' src={popup} alt='miguel'></img>
+                    <img className='pop-up-pic' src={popup} alt='miguel' onLoad={handleImageLoad}></img>
+                    {isLoading && <Spinner />}
                 </div>
 
                 <Link to="/popupdinner">
