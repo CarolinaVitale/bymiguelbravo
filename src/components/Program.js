@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import miguel from "../images/miguel-bravo.jpg";
 import "../styles/Program.css";
@@ -13,24 +13,17 @@ import catering4 from "../images/catering4.jpeg";
 import catering5 from "../images/catering5.jpeg";
 import catering6 from "../images/catering6.jpeg";
 import Slider from "./Slider";
-import Spinner from "./Spinner";
 
 
 function Program() {
-    const [isLoading, setIsLoading] = useState(true);
-
-    const handleImageLoad = () => {
-        setIsLoading(false);
-    };
 
     return (
         <div className='program'>
-            {isLoading && <Spinner />}
             <Slider />
             <div className="bio">
                 <h1 className="pop-h">MI HISTORIA</h1>
                 <div className='pop-up-container'>
-                    <img className='pop-up-pic' src={miguel} alt='miguel' onLoad={handleImageLoad}></img>
+                    <img className='pop-up-pic' src={miguel} alt='miguel' ></img>
                 </div>
                 <Link to="/sobremi">
                     <button className='grey-button'>Conoce más</button>
@@ -43,28 +36,22 @@ function Program() {
                 <div className='program-carousel'>
                     <Carousel slide={false} >
                         <Carousel.Item>
-                            <img src={catering} alt='catering' onLoad={handleImageLoad}></img>
-                            {isLoading && <Spinner />}
+                            <img src={catering} alt='catering' ></img>
                         </Carousel.Item>
                         <Carousel.Item>
-                            <img src={catering2} alt='catering' onLoad={handleImageLoad}></img>
-                            {isLoading && <Spinner />}
+                            <img src={catering2} alt='catering'></img>
                         </Carousel.Item>
                         <Carousel.Item>
-                            <img src={catering3} alt='catering' onLoad={handleImageLoad}></img>
-                            {isLoading && <Spinner />}
+                            <img src={catering3} alt='catering'></img>
                         </Carousel.Item>
                         <Carousel.Item>
-                            <img src={catering4} alt='catering' onLoad={handleImageLoad}></img>
-                            {isLoading && <Spinner />}
+                            <img src={catering4} alt='catering'></img>
                         </Carousel.Item>
                         <Carousel.Item>
-                            <img src={catering5} alt='catering' onLoad={handleImageLoad}></img>
-                            {isLoading && <Spinner />}
+                            <img src={catering5} alt='catering'></img>
                         </Carousel.Item>
                         <Carousel.Item>
-                            <img src={catering6} alt='catering' onLoad={handleImageLoad}></img>
-                            {isLoading && <Spinner />}
+                            <img src={catering6} alt='catering'></img>
                         </Carousel.Item>
                     </Carousel>
                 </div>
@@ -78,8 +65,7 @@ function Program() {
                 <h1 className="pop-h">POP-UP DINNER</h1>
                 <br />
                 <div className='pop-up-container'>
-                    <img className='pop-up-pic' src={popup} alt='miguel' onLoad={handleImageLoad}></img>
-                    {isLoading && <Spinner />}
+                    <img className='pop-up-pic' src={popup} alt='miguel'></img>
                 </div>
 
                 <Link to="/popupdinner">
@@ -87,8 +73,6 @@ function Program() {
                 </Link>
 
             </div>
-
-            
         </div>
     );
 }
