@@ -11,15 +11,6 @@
     margin-bottom: 100px;
 }
 
-.top-container h1 {
-    text-align: center;
-    margin-bottom: 40px;
-    margin-top: 60px;
-    color: #444;
-    font-family: 'Calibre-Bold', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-    letter-spacing: 0.2em;
-}
-
 .pop-up-container {
     display: flex;
     justify-content: center;
@@ -40,7 +31,6 @@
         padding-top: 40px;
         padding-bottom: 40px;
         max-width: 850px;
-
     }
 
     .pop-up-dinner h1 {

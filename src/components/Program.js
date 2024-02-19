@@ -42,31 +42,32 @@ function Program() {
                 <h1 className="pop-h">¿QUIÉRES CONTRATAR NUESTRO SERVICIO DE CATERING?</h1>
 
                 <div className='program-carousel'>
-                    <Carousel slide={false} onLoad={handleImageLoad}>
+                    <Carousel slide={false} >
                         <Carousel.Item>
-                            <img src={catering} alt='catering'></img>
+                            <img src={catering} alt='catering' onLoad={handleImageLoad}></img>
+                            {isLoading && <Spinner />}
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img src={catering2} alt='catering' onLoad={handleImageLoad}></img>
+                            {isLoading && <Spinner />}
                         </Carousel.Item>
 
                         <Carousel.Item>
-                            <img src={catering2} alt='catering'></img>
+                            <img src={catering3} alt='catering' onLoad={handleImageLoad}></img>
+                            {isLoading && <Spinner />}
                         </Carousel.Item>
-
                         <Carousel.Item>
-                            <img src={catering3} alt='catering'></img>
+                            <img src={catering4} alt='catering' onLoad={handleImageLoad}></img>
+                            {isLoading && <Spinner />}
                         </Carousel.Item>
-
                         <Carousel.Item>
-                            <img src={catering4} alt='catering'></img>
+                            <img src={catering5} alt='catering' onLoad={handleImageLoad}></img>
+                            {isLoading && <Spinner />}
                         </Carousel.Item>
-
                         <Carousel.Item>
-                            <img src={catering5} alt='catering'></img>
+                            <img src={catering6} alt='catering' onLoad={handleImageLoad}></img>
+                            {isLoading && <Spinner />}
                         </Carousel.Item>
-
-                        <Carousel.Item>
-                            <img src={catering6} alt='catering'></img>
-                        </Carousel.Item>
-                        {isLoading && <Spinner />}
                     </Carousel>
                 </div>
 

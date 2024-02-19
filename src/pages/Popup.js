@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "../styles/Popupdinner.css";
 import popup from "../images/catering4.jpeg";
 import popup2 from "../images/carousel1.jpg";
@@ -14,99 +14,69 @@ import popup12 from "../images/popupdinner4.jpg";
 import Spinner from "../components/Spinner";
 
 
-function Popup () {
-
+function Popup() {
     const [isLoading, setIsLoading] = useState(true);
-
 
     const handleImageLoad = () => {
         setIsLoading(false);
     };
 
     return (
-        <div>
-            
-            <div className='top-container'>
-                <img className='pop-up-top' src={popup12} alt='miguel' onLoad={handleImageLoad}></img>
-                {isLoading && <Spinner />}
-            </div>
-            
-            <div className='pop-up-dinner'>
-                <div className="divider"></div>
-                <br/>
-                <div className="wrapper-pop">
-                    <div className="typing-demo-pop">
-                        POP UP DINNER.
-                    </div>
-                </div>
-                <br />
-                <p>
-                    Una POP-UP DINNER es un evento culinario efímero y exclusivo que ofrece una experiencia gastronómica única.
-                </p>
-                <br />
-                <div className='pop-up-container'>
-                    <img className='pop-up-pic' src={popup2} alt='miguel' onLoad={handleImageLoad}></img>
-                    {isLoading && <Spinner />}
-                </div>
-                <br />
-                <p>
-                    Imagina una cena clandestina en un lugar inesperado donde Miguel se encargó de organizar dos ediciones de esta cena, cada una compuesta por ocho exquisitos tiempos, cada uno cuidadosamente elaborado para resaltar sabores, texturas y técnicas culinarias innovadoras y estuvieron acompañados de maridajes cuidadosamente seleccionados.
-                </p>
-                <br />
-                <div className='pop-up-container'>
-                    <img className='pop-up-pic' src={popup3} alt='miguel' onLoad={handleImageLoad}></img>
-                    {isLoading && <Spinner />}
-                </div>
-                <br />
-                <p>
-                    Este evento atrajo a una audiencia ávida de explorar nuevos sabores y experiencias culinarias, mientras disfrutaban de una atmósfera íntima y emocionante. Fue una ocasión especial que rompió con lo convencional, ofreciendo una propuesta disruptiva y emocionante.
-                </p>
-                <br />
-                <div className='pop-up-container'>
-                    <img className='pop-up-pic' src={popup10} alt='miguel' onLoad={handleImageLoad}></img>
-                    {isLoading && <Spinner />}
-                </div>
-                <br />
-                <p>
-                    Miguel se encargó de todos los aspectos del evento, desde la planificación y la preparación de los platos hasta la presentación y el servicio, garantizando una experiencia memorable y personalizada para todos los asistentes.
-                </p>
-                <br />
-                <div className='pop-up-container'>
-                    <img className='pop-up-pic' src={popup9} alt='miguel' onLoad={handleImageLoad}></img>
-                    {isLoading && <Spinner />}
-                </div>
+        <div className='pop-up-dinner'>
+            {isLoading && <Spinner />}
+            <img className='pop-up-top' src={popup12} alt='miguel' onLoad={handleImageLoad}></img>
 
-                <div className='pop-up-container'>
-                    <img className='pop-up-pic' src={popup} alt='miguel' onLoad={handleImageLoad}></img>
-                    {isLoading && <Spinner />}
-                </div>
-
-                <div className='pop-up-container'>
-                    <img className='pop-up-pic' src={popup8} alt='miguel' onLoad={handleImageLoad}></img>
-                    {isLoading && <Spinner />}
-                </div>
-
-                <div className='pop-up-container'>
-                    <img className='pop-up-pic' src={popup5} alt='miguel' onLoad={handleImageLoad}></img>
-                    {isLoading && <Spinner />}
-                </div>
-
-                <div className='pop-up-container'>
-                    <img className='pop-up-pic' src={popup6} alt='miguel' onLoad={handleImageLoad}></img>
-                    {isLoading && <Spinner />}
-                </div>
-
-                <div className='pop-up-container'>
-                    <img className='pop-up-pic' src={popup7} alt='miguel' onLoad={handleImageLoad}></img>
-                    {isLoading && <Spinner />}
-                </div>
-
-                <div className='pop-up-container'>
-                    <img className='pop-up-pic' src={popup11} alt='miguel' onLoad={handleImageLoad}></img>
-                    {isLoading && <Spinner />}
+            <br />
+            <div className="wrapper-pop">
+                <div className="typing-demo-pop">
+                    POP UP DINNER.
                 </div>
             </div>
-        </div>    
+            <br />
+            <p>
+                Una POP-UP DINNER es un evento culinario efímero y exclusivo que ofrece una experiencia gastronómica única.
+            </p>
+            <br />
+
+            <img className='pop-up-pic' src={popup2} alt='miguel' onLoad={handleImageLoad}></img>
+
+            <br />
+            <p>
+                Imagina una cena clandestina en un lugar inesperado donde Miguel se encargó de organizar dos ediciones de esta cena, cada una compuesta por ocho exquisitos tiempos, cada uno cuidadosamente elaborado para resaltar sabores, texturas y técnicas culinarias innovadoras y estuvieron acompañados de maridajes cuidadosamente seleccionados.
+            </p>
+            <br />
+
+            <img className='pop-up-pic' src={popup3} alt='miguel' onLoad={handleImageLoad}></img>
+
+            <br />
+            <p>
+                Este evento atrajo a una audiencia ávida de explorar nuevos sabores y experiencias culinarias, mientras disfrutaban de una atmósfera íntima y emocionante. Fue una ocasión especial que rompió con lo convencional, ofreciendo una propuesta disruptiva y emocionante.
+            </p>
+            <br />
+
+            <img className='pop-up-pic' src={popup10} alt='miguel' onLoad={handleImageLoad}></img>
+
+            <br />
+            <p>
+                Miguel se encargó de todos los aspectos del evento, desde la planificación y la preparación de los platos hasta la presentación y el servicio, garantizando una experiencia memorable y personalizada para todos los asistentes.
+            </p>
+            <br />
+
+            <img className='pop-up-pic' src={popup9} alt='miguel' onLoad={handleImageLoad}></img>
+
+            <img className='pop-up-pic' src={popup} alt='miguel' onLoad={handleImageLoad}></img>
+
+            <img className='pop-up-pic' src={popup8} alt='miguel' onLoad={handleImageLoad}></img>
+
+            <img className='pop-up-pic' src={popup5} alt='miguel' onLoad={handleImageLoad}></img>
+
+            <img className='pop-up-pic' src={popup6} alt='miguel' onLoad={handleImageLoad}></img>
+
+            <img className='pop-up-pic' src={popup7} alt='miguel' onLoad={handleImageLoad}></img>
+
+            <img className='pop-up-pic' src={popup11} alt='miguel' onLoad={handleImageLoad}></img>
+
+        </div>
     );
 }
 
