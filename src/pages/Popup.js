@@ -12,10 +12,12 @@ import popup10 from "../images/popupdinner2.jpg";
 import popup11 from "../images/popupdinner3.jpg";
 import popup12 from "../images/popupdinner4.jpg";
 import Spinner from "../components/Spinner";
+import "../styles/App.css";
 
 
 function Popup() {
     const [isLoading, setIsLoading] = useState(true);
+
 
     const handleImageLoad = () => {
         setIsLoading(false);
@@ -24,7 +26,7 @@ function Popup() {
     return (
         <div className='pop-up-dinner'>
             {isLoading && <Spinner />}
-            <img className='pop-up-top' src={popup12} alt='miguel' onLoad={handleImageLoad}></img>
+            <img className='pop-up-top' src={popup12} alt='pop-up-dinner' onLoad={handleImageLoad}></img>
 
             <br />
             <div className="wrapper-pop">
@@ -38,7 +40,7 @@ function Popup() {
             </p>
             <br />
 
-            <img className='pop-up-pic' src={popup2} alt='miguel' onLoad={handleImageLoad}></img>
+            <img className='pop-up-pic' src={popup2} alt='pop-up-dinner' onLoad={handleImageLoad}></img>
 
             <br />
             <p>
@@ -46,7 +48,7 @@ function Popup() {
             </p>
             <br />
 
-            <img className='pop-up-pic' src={popup3} alt='miguel' onLoad={handleImageLoad}></img>
+            <img className='pop-up-pic' src={popup3} alt='pop-up-dinner' onLoad={handleImageLoad}></img>
 
             <br />
             <p>
@@ -54,7 +56,7 @@ function Popup() {
             </p>
             <br />
 
-            <img className='pop-up-pic' src={popup10} alt='miguel' onLoad={handleImageLoad}></img>
+            <img className='pop-up-pic' src={popup10} alt='pop-up-dinner' onLoad={handleImageLoad}></img>
 
             <br />
             <p>
@@ -62,19 +64,19 @@ function Popup() {
             </p>
             <br />
 
-            <img className='pop-up-pic' src={popup9} alt='miguel' onLoad={handleImageLoad}></img>
+            <img className='pop-up-pic' src={popup9} alt='pop-up-dinner' onLoad={handleImageLoad}></img>
 
-            <img className='pop-up-pic' src={popup} alt='miguel' onLoad={handleImageLoad}></img>
+            <img className='pop-up-pic' src={popup} alt='pop-up-dinner' onLoad={handleImageLoad}></img>
 
-            <img className='pop-up-pic' src={popup8} alt='miguel' onLoad={handleImageLoad}></img>
+            <img className='pop-up-pic' src={popup8} alt='pop-up-dinner' onLoad={handleImageLoad}></img>
 
-            <img className='pop-up-pic' src={popup5} alt='miguel' onLoad={handleImageLoad}></img>
+            <img className='pop-up-pic' src={popup5} alt='pop-up-dinner' onLoad={handleImageLoad}></img>
 
-            <img className='pop-up-pic' src={popup6} alt='miguel' onLoad={handleImageLoad}></img>
+            <img className='pop-up-pic' src={popup6} alt='pop-up-dinner' onLoad={handleImageLoad}></img>
 
-            <img className='pop-up-pic' src={popup7} alt='miguel' onLoad={handleImageLoad}></img>
+            <img className='pop-up-pic' src={popup7} alt='pop-up-dinner' onLoad={handleImageLoad}></img>
 
-            <img className='pop-up-pic' src={popup11} alt='miguel' onLoad={handleImageLoad}></img>
+            <img className='pop-up-pic' src={popup11} alt='pop-up-dinner' onLoad={handleImageLoad}></img>
 
         </div>
     );

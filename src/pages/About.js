@@ -8,7 +8,6 @@ function About() {
 
     const [isLoading, setIsLoading] = useState(true);
 
-
     const handleImageLoad = () => {
         setIsLoading(false);
     };
@@ -16,19 +15,17 @@ function About() {
     return (
 
         <div className='about-info'>
-            <div className='image-container'>
-                <img className='about-image' src={miguel2} alt='miguel' onLoad={handleImageLoad}></img>
-                {isLoading && <Spinner />}
-            </div>
+            {isLoading && <Spinner />}
+            <img className='about-image' src={miguel2} alt='miguel' onLoad={handleImageLoad}></img>
             <br />
-
+            <br />
             <div className="wrapper">
                 <div className="typing-demo">
                     Hola!, soy Miguel Bravo.
                 </div>
             </div>
-            
-            <br/>
+
+            <br />
             <div className="about-text">
                 <br />
                 <p>Con una formación inicial como ingeniero en 2013, Miguel descubrió su verdadera pasión en la cocina, graduándose en Le Cordon Bleu de Perú con la mención del Cordon Azul en 2015. Desde entonces, ha dejado su huella culinaria en distintas naciones, construyendo una trayectoria de casi 10 años.

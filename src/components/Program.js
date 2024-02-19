@@ -25,13 +25,12 @@ function Program() {
 
     return (
         <div className='program'>
-            
+            {isLoading && <Spinner />}
             <Slider />
             <div className="bio">
                 <h1 className="pop-h">MI HISTORIA</h1>
                 <div className='pop-up-container'>
                     <img className='pop-up-pic' src={miguel} alt='miguel' onLoad={handleImageLoad}></img>
-                    {isLoading && <Spinner />}
                 </div>
                 <Link to="/sobremi">
                     <button className='grey-button'>Conoce más</button>
@@ -51,7 +50,6 @@ function Program() {
                             <img src={catering2} alt='catering' onLoad={handleImageLoad}></img>
                             {isLoading && <Spinner />}
                         </Carousel.Item>
-
                         <Carousel.Item>
                             <img src={catering3} alt='catering' onLoad={handleImageLoad}></img>
                             {isLoading && <Spinner />}

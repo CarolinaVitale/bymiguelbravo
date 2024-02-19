@@ -96,7 +96,7 @@ nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
     font-size: x-small;
     size: 10px;
     padding: 10px 20px;
-    top: 30%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -336,7 +336,7 @@ nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
 
 
 /*   A B O U T   */
-.image-container {
+/* .image-container {
   border: 1px solid transparent;
   display: flex;
   align-items: center;
@@ -344,7 +344,7 @@ nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
   position: relative;
   width: fit-content;
   margin: 0 auto;
-}
+} */
 
 .about-info p {
   text-align: justify;
@@ -403,7 +403,7 @@ nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
 @media (max-width:767px) {
   .typing-demo {
     width: 25ch;
-    font-size: 1.3em;
+    font-size: 100%;
     font-weight: bold;
   }
 }
