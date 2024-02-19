@@ -290,32 +290,32 @@ nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
   }
 }
 
-/*   E N D   C O N T A C T   */
-
-
 /*   T Y P I N G   */
-.wrapper {
+.wrapper-contact {
   /*This part is important for centering*/
   display: grid;
   place-items: center;
+  margin-bottom: 30px;
+  margin-top: 50px;
 }
 
-.typing-demo {
-  width: 28ch;
-  animation: typing 3s steps(24), blink .5s step-end infinite alternate;
+.typing-demo-contact {
+  width: 22ch;
+  animation: typing 3s steps(20), blink .5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
-  font-family: monospace;
+  font-family: 'Calibre-Bold', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  letter-spacing: 0.2em;
   font-size: 2em;
+  font-weight: bold;
 }
 
 @media (max-width:767px) {
-  .typing-demo {
-    width: 33ch;
-    font-size: 0.9em;
+  .typing-demo-contact {
+    width: 22ch;
+    font-size: 1.4em;
     font-weight: bold;
-
   }
 }
 
@@ -332,6 +332,7 @@ nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
 }
 
 /*   T Y P I N G   E N D    */
+/*   E N D   C O N T A C T   */
 
 
 /*   A B O U T   */
@@ -380,6 +381,46 @@ nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
   }
 }
 
+/*   T Y P I N G   */
+.wrapper {
+  /*This part is important for centering*/
+  display: grid;
+  place-items: center;
+}
+
+.typing-demo {
+  width: 25.4ch;
+  animation: typing 3s steps(24), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: 'Calibre-Bold', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  letter-spacing: 0.2em;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+@media (max-width:767px) {
+  .typing-demo {
+    width: 25ch;
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+/*   T Y P I N G   E N D    */
 /*   E N D  A B O U T   */
 
 
@@ -392,13 +433,9 @@ nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
   height: 100%;
   background-color: rgba(255, 255, 255, 0.7);
   /* Color de fondo semitransparente */
-
   display: flex;
-
   justify-content: center;
-
   align-items: center;
-
 }
 
 .spinner {
@@ -409,6 +446,7 @@ nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
   border-radius: 50%;
   background: conic-gradient(#330dbf, #05a590, #f5ee33, white);
   animation: spin 1.4s linear infinite;
+  -webkit-animation: spin 1.4s linear infinite;
   box-shadow: 0px 0px 150px -75px black;
   border: 4px solid white;
   box-shadow: 0px 0px 150px -75px black;

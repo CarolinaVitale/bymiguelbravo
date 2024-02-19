@@ -28,11 +28,7 @@ function Program() {
             
             <Slider />
             <div className="bio">
-                <div className="wrapper-program">
-                    <div className="typing-demo-program">
-                        MI HISTORIA.
-                    </div>
-                </div>
+                <h1 className="pop-h">MI HISTORIA</h1>
                 <div className='pop-up-container'>
                     <img className='pop-up-pic' src={miguel} alt='miguel' onLoad={handleImageLoad}></img>
                     {isLoading && <Spinner />}
@@ -43,7 +39,7 @@ function Program() {
             </div>
 
             <div className="catering">
-                <h1 className="pop-h">¿Quiéres contratar nuestro servicio de Catering?</h1>
+                <h1 className="pop-h">¿QUIÉRES CONTRATAR NUESTRO SERVICIO DE CATERING?</h1>
 
                 <div className='program-carousel'>
                     <Carousel slide={false} onLoad={handleImageLoad}>
@@ -80,9 +76,7 @@ function Program() {
             </div>
 
             <div className='popup-div'>
-                <h1 className="pop-h">EVENTOS</h1>
-                <br />
-                <h2 className="pop-h">POP-UP DINNER</h2>
+                <h1 className="pop-h">POP-UP DINNER</h1>
                 <br />
                 <div className='pop-up-container'>
                     <img className='pop-up-pic' src={popup} alt='miguel' onLoad={handleImageLoad}></img>

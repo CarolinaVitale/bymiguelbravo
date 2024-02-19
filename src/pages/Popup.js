@@ -25,6 +25,7 @@ function Popup () {
 
     return (
         <div>
+            
             <div className='top-container'>
                 <img className='pop-up-top' src={popup12} alt='miguel' onLoad={handleImageLoad}></img>
                 {isLoading && <Spinner />}
@@ -33,7 +34,11 @@ function Popup () {
             <div className='pop-up-dinner'>
                 <div className="divider"></div>
                 <br/>
-                <h1>POP-UP DINNER</h1>
+                <div className="wrapper-pop">
+                    <div className="typing-demo-pop">
+                        POP UP DINNER.
+                    </div>
+                </div>
                 <br />
                 <p>
                     Una POP-UP DINNER es un evento culinario efímero y exclusivo que ofrece una experiencia gastronómica única.

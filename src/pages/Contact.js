@@ -6,7 +6,12 @@ function Contact () {
     return (
 
         <div className='contact-container'>
-            <h1>¿Tienes alguna duda?</h1>
+            <div className="wrapper-contact">
+                <div className="typing-demo-contact">
+                    ¿Tienes alguna duda?
+                </div>
+            </div>
+            <h1></h1>
             <br/>
             <h5>Nuestros horarios:</h5>
             <br />

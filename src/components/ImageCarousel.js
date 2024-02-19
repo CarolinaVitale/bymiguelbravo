@@ -9,7 +9,7 @@ import Spinner from "../components/Spinner";
 
 
 
-function Slide () {
+function ImageCarousel () {
 
     const [isLoading, setIsLoading] = useState(true);
 
@@ -20,22 +20,25 @@ function Slide () {
 
     return (
         <div>
-            <Carousel onLoad={handleImageLoad} >
+            <Carousel >
                 <CarouselItem interval={1500}>
-                    <img src={image1} alt='Pop-up Dinner' ></img>
+                    <img src={image1} alt='Pop-up Dinner' onLoad={handleImageLoad}></img>
+                    {isLoading && <Spinner />}
                 </CarouselItem>
 
                 <CarouselItem interval={1500}>
-                    <img src={image2} alt='Pop-up Dinner' ></img>
+                    <img src={image2} alt='Pop-up Dinner' onLoad={handleImageLoad}></img>
+                    {isLoading && <Spinner />}
                 </CarouselItem>
 
                 <CarouselItem interval={1500}>
-                    <img src={image3} alt='Pop-up Dinner' ></img>
+                    <img src={image3} alt='Pop-up Dinner' onLoad={handleImageLoad}></img>
+                    {isLoading && <Spinner />}
                 </CarouselItem>
-                {isLoading && <Spinner />}
+               
             </Carousel>
         </div>
     );
 }
 
-export default Slide;
+export default ImageCarousel;

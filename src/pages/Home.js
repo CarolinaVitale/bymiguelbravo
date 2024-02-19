@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/App.css";
 import logo3D from "../images/logotype-3d.png";
-import Slide from "../components/Carousel";
+import ImageCarousel from "../components/ImageCarousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Program from "../components/Program";
 
@@ -12,7 +12,7 @@ function Home() {
 
         <div className="App">
 
-            <Slide className='carousel spinner-box' />
+            <ImageCarousel className='carousel spinner-box' />
             
             <img src={logo3D} className='logo-3d' alt="logo-3d" />
 

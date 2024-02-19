@@ -5,7 +5,7 @@
     letter-spacing: 0.2em;
 }
 
-.pop-up-dinner{
+.pop-up-dinner {
     display: flex;
     flex-direction: column;
     margin-bottom: 100px;
@@ -69,15 +69,59 @@
         padding-right: 20px;
         font-size: smaller;
     }
-    
+
     .pop-up-dinner h1 {
         padding-left: 20px;
         padding-right: 20px;
         text-align: center;
         margin-bottom: 40px;
-        }
+    }
 }
 
 .pop-up-top {
     width: 100%;
 }
+
+
+/*   T Y P I N G   */
+.wrapper-pop {
+    /*This part is important for centering*/
+    margin-top: 50px;
+    display: grid;
+    place-items: center;
+}
+
+.typing-demo-pop {
+    width: 17ch;
+    animation: typing 3s steps(14), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: 'Calibre-Bold', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    letter-spacing: 0.2em;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+@media (max-width:767px) {
+    .typing-demo-pop {
+        width: 16.7ch;
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+/*   T Y P I N G   E N D    */
