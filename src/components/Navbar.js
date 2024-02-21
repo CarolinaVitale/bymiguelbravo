@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import logo from "../images/logo.png";
-import logo2 from "../images/horizontal-logotype.png";
+import logo2 from "../images/logo-efect.png";
 import "../styles/Navbar.css";
 import { Link, useNavigate } from "react-router-dom";
 import NavDropdown from "react-bootstrap/NavDropdown";
@@ -35,7 +35,7 @@ function NavbarOff() {
                         </Nav.Link>
 
                         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} onClick={() => setShow(!show)} />
-                        
+
                         <Navbar.Offcanvas
                             show={show}
                             onHide={() => setShow(false)}
@@ -57,19 +57,19 @@ function NavbarOff() {
                             </Offcanvas.Header>
 
                             <Offcanvas.Body>
-                              
-                                    <Nav className="justify-content-end flex-grow-1 pe-3">
-                                        
-                                        <Nav.Link className='links' as={Link} to="/sobremi" onClick={() => { closeNav(); navigate("/sobremi"); }}>Sobre mi</Nav.Link>
-                                        <Nav.Link className='links' as={Link} to="/servicios" onClick={() => { closeNav(); navigate("/servicios"); }}>Servicios</Nav.Link>
-                                        <Nav.Link className='links' as={Link} to="/contacto" onClick={() => { closeNav(); navigate("/contacto"); }}>Contáctanos</Nav.Link>
-                                        {/* navbar drop  */}
-                                        
-                                        <NavDropdown className='links' title="Eventos" id="basic-nav-dropdown">
-                                            <NavDropdown.Item className='links-drop' as={Link} to="/popupdinner" onClick={() => { closeNav(); navigate("/popupdinner"); }}>Pop-up Dinner</NavDropdown.Item>
-                                        </NavDropdown>    
-                                        {/* navbar drop end  */}
-                                    </Nav>
+
+                                <Nav className="justify-content-end flex-grow-1 pe-3">
+                                    <Nav.Link className='links' as={Link} to="/menu" onClick={() => { closeNav(); navigate("/menu"); }}>Menú</Nav.Link>
+                                    <Nav.Link className='links' as={Link} to="/sobremi" onClick={() => { closeNav(); navigate("/sobremi"); }}>Sobre mi</Nav.Link>
+                                    <Nav.Link className='links' as={Link} to="/servicios" onClick={() => { closeNav(); navigate("/servicios"); }}>Servicios</Nav.Link>
+                                    <Nav.Link className='links' as={Link} to="/contacto" onClick={() => { closeNav(); navigate("/contacto"); }}>Contáctanos</Nav.Link>
+                                    {/* navbar drop  */}
+
+                                    <NavDropdown className='links' title="Eventos" id="basic-nav-dropdown">
+                                        <NavDropdown.Item className='links-drop' as={Link} to="/popupdinner" onClick={() => { closeNav(); navigate("/popupdinner"); }}>Pop-up Dinner</NavDropdown.Item>
+                                    </NavDropdown>
+                                    {/* navbar drop end  */}
+                                </Nav>
                             </Offcanvas.Body>
 
                         </Navbar.Offcanvas>
