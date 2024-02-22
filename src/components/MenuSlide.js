@@ -4,7 +4,7 @@ import "../styles/App.css";
 
 function MenuSlide() {
     return (
-        <div className='slide-container'>
+        <div className='menu-slide-container'>
             <div className="slide-track">
                 <div className="slide">
                     <img src={logo} alt="slide" ></img>

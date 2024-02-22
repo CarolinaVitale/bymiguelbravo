@@ -294,22 +294,10 @@ nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
     border-color: transparent
   }
 }
-
 /*   T Y P I N G   E N D    */
 /*   E N D   C O N T A C T   */
 
-
 /*   A B O U T   */
-/* .image-container {
-  border: 1px solid transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  width: fit-content;
-  margin: 0 auto;
-} */
-
 .about-info p {
   text-align: justify;
 }

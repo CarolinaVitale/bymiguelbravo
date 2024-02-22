@@ -33,7 +33,7 @@
 }
 
 .bio {
-    background-color: rgb(241, 241, 241);
+    background-color: #f1f1f1;
     padding-bottom: 60px;
     padding-top: 60px;
 }
@@ -76,7 +76,7 @@
 }
 
 .popup-div {
-    background-color: rgb(241, 241, 241);
+    background-color: #f1f1f1;
     text-align: center;
     padding-bottom: 60px;
     padding-top: 60px;
@@ -111,17 +111,18 @@
 
 /*   R I B B O N  */
 .slide-container {
+    background-color: #f1f1f1;
     width: 100vw;
     height: auto;
     margin: auto;
     overflow: hidden;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .slide-container .slide-track {
     display: flex;
-    animation: scroll 10s linear infinite;
-    -webkit-animation: scroll 30s linear infinite;
+    animation: scroll 50s linear infinite;
+    -webkit-animation: scroll 50s linear infinite;
     width: calc(200px * 14);
 }
 

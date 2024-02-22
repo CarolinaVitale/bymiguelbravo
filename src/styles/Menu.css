@@ -7,10 +7,20 @@
      margin-right: 20px;
  }
 
+ .menu-button {
+     display: flex;
+     justify-content: center;
+ }
+
+ .menu-button a {
+    padding: 0;
+    margin: 0;
+ }
+
  .menu-container h3 {
-    text-align: center;
-    margin-bottom: 25px;
-    margin-top: 40px;
+     text-align: center;
+     margin-bottom: 25px;
+     margin-top: 40px;
  }
 
  .menu {
@@ -18,9 +28,9 @@
  }
 
  .delivery {
-    margin-top: 25px;
-    margin-bottom: 50px;
-    color: #8c1b1b;
+     margin-top: 25px;
+     margin-bottom: 50px;
+     color: #8c1b1b;
  }
 
  .price {
@@ -30,8 +40,8 @@
 
  @media (min-width: 767px) {
      .menu-container {
-        width: 45%;
-        margin: 0 auto;
+         width: 45%;
+         margin: 0 auto;
      }
  }
 
@@ -40,3 +50,43 @@
          font-size: smaller;
      }
  }
+
+ /*   R I B B O N  */
+ .menu-slide-container {
+     width: 100vw;
+     height: auto;
+     margin: auto;
+     overflow: hidden;
+     margin-bottom: 20px;
+ }
+
+ .menu-slide-container .slide-track {
+     display: flex;
+     animation: scroll 40s linear infinite;
+     -webkit-animation: scroll 40s linear infinite;
+     width: calc(300px * 14);
+ }
+
+ .menu-slide-container .slide {
+     width: 300px;
+ }
+
+ .menu-slide-container .slide img {
+     margin-left: 40px;
+     width: 100%;
+     margin-top: 20px;
+ }
+
+ @keyframes scroll {
+     0% {
+         transform: translatex(0);
+         webkit-transform: translatex(0);
+     }
+
+     100% {
+         transform: translatex(calc(-300px * 7));
+         webkit-transform: translatex(calc(-300px * 7));
+     }
+ }
+
+ /*   E N D     R I B B O N  */
