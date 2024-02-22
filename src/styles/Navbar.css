@@ -1,5 +1,28 @@
 /* Navbar.css */
+nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
+    margin-bottom: 0 !important;
+}
 
+.logo-3d {
+    max-width: 40%;
+    opacity: 0.5;
+    position: absolute;
+    top: 45%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 767px) {
+    .logo-3d {
+        max-width: 50%;
+        opacity: 0.5;
+        top: 10%;
+        left: 54%;
+        transform: translateX(-50%);
+    }
+}
+
+/*  E N D   N A V B A R  */
 
 .navbar {
     font-family: 'Calibre-Bold', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
@@ -53,6 +76,10 @@ div.dropdown-menu.show {
         display: inline;
         vertical-align: middle;
     }
+
+    div.offcanvas-body {
+        margin-left: 40px;
+    }
 }
 
 .logo2 {
@@ -62,18 +89,15 @@ div.dropdown-menu.show {
 
 
 /* Estilos para el subrayado animado */
-
 .navbar a {
     position: relative;
     text-decoration: none;
     color: #242424;
-    /* Color del texto */
 }
 
 .links {
     margin-right: 25px;
 }
-
 
 .navbar a::before {
     content: '';

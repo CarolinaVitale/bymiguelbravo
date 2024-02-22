@@ -12,14 +12,12 @@ import catering3 from "../images/catering3.jpeg";
 import catering4 from "../images/catering4.jpeg";
 import catering5 from "../images/catering5.jpeg";
 import catering6 from "../images/catering6.jpeg";
-import Slider from "./Slider";
 
 
 function Program() {
 
     return (
         <div className='program'>
-            <Slider />
             <div className="bio">
                 <h1 className="pop-h">MI HISTORIA</h1>
                 <div className='pop-up-container'>

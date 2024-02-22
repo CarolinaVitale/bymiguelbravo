@@ -9,31 +9,7 @@ body {
   }
 }
 
-/*  N A V B A R  */
-nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
-  margin-bottom: 0 !important;
-}
 
-.logo-3d {
-  max-width: 40%;
-  opacity: 0.5;
-  position: absolute;
-  top: 45%;
-  left: 55%;
-  transform: translate(-50%, -50%);
-}
-
-@media (max-width: 767px) {
-  .logo-3d {
-    max-width: 50%;
-    opacity: 0.5;
-    top: 10%;
-    left: 54%;
-    transform: translateX(-50%);
-  }
-}
-
-/*  E N D   N A V B A R  */
 
 
 /*  C A R O U S E L  */
@@ -95,7 +71,7 @@ nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
     font-size: x-small;
     size: 10px;
     padding: 10px 20px;
-    top: 40%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -294,6 +270,7 @@ nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
     border-color: transparent
   }
 }
+
 /*   T Y P I N G   E N D    */
 /*   E N D   C O N T A C T   */
 
