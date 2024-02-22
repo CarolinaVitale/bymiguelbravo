@@ -24,12 +24,12 @@ function App() {
       <NavbarOff />
 
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/menu" element={<Menu />} />
-        <Route path="/servicios" element={<Services />} />
-        <Route path="/sobremi" element={<About />} />
-        <Route path="/contacto" element={<Contact />} />
-        <Route path="/popupdinner" element={<Popup />} />
+        <Route path="/" element={<Home />} exact />
+        <Route path="/menu" element={<Menu />} exact />
+        <Route path="/servicios" element={<Services />} exact />
+        <Route path="/sobremi" element={<About />} exact  />
+        <Route path="/contacto" element={<Contact />} exact  />
+        <Route path="/popupdinner" element={<Popup />} exact />
 
       </Routes>
 

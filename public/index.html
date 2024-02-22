@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -11,23 +12,10 @@
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
   <title>by Miguel Bravo</title>
-
 </head>
 
 <body>
   <div id="root"></div>
-  <script>
-    // Aquí es donde puedes configurar tu servidor para manejar todas las solicitudes
-    // y enviarlas a tu aplicación de React.
-    (function () {
-      var path = window.location.pathname;
-      if (path !== '/' && path !== '/menu' && path !== '/servicios' && path !== '/sobremi' && path !== '/contacto' && path !== '/popupdinner') {
-
-        window.location.pathname = '/';
-      }
-    })();
-  </script>
-  <script src="/bundle.js"></script>
 </body>
 
 </html>
