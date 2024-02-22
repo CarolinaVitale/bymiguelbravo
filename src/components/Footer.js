@@ -20,9 +20,8 @@ function Footer() {
         if (content && footer) {
             const contentHeight = content.offsetHeight;
             const windowHeight = window.innerHeight;
-            const footerHeight = footer.offsetHeight;
             
-        setIsFooterFixed(contentHeight + footerHeight < windowHeight);
+        setIsFooterFixed(contentHeight < windowHeight);
        }
     }
 

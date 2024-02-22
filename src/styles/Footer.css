@@ -1,63 +1,41 @@
 .footer {
-
     width: 100%;
-
     background-color: rgb(40, 40, 40);
-
     padding-bottom: 30px;
-
 }
-
-
 
 .fixed {
-
     position: fixed;
-
     bottom: 0;
-
 }
-
-
 
 .footer .content {
-
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
-
 }
-
-
 
 .footer p {
-
     color: lightgrey;
-
     font-size: xx-small;
-
     text-align: center;
-
 }
-
-
 
 .footer .location img {
-
     max-width: 10px;
-
     height: 100%;
-
 }
-
-
 
 .location {
-
     display: flex;
-
     align-items: center;
-
+    margin-bottom: 20px;
 }
+
+.location p {
+    margin: 0;
+    font-size: small;
+    margin-left: 15px;
+}
+
+/*  */
