@@ -78,20 +78,20 @@ function Menu() {
 
                 {isLoading && <Spinner />}
 
-            </div>
-            <div className="menu-button">
-               
-
+                <div className="menu-button">
                     <a href='https://wa.me/message/26GNQXJCZ3VVM1' target='_blank' rel="noreferrer">
-                    <button href='' className='button-social'>Haz tu pedido aquí</button>
+                        <button href='' className='grey-button'>Haz tu pedido aquí</button>
                     </a>
+                </div>
             </div>
+
+
 
             <br />
             <br />
             <br />
             <br />
-            
+
         </div>
     );
 }

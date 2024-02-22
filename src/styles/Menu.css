@@ -7,16 +7,6 @@
      margin-right: 20px;
  }
 
- .menu-button {
-     display: flex;
-     justify-content: center;
- }
-
- .menu-button a {
-    padding: 0;
-    margin: 0;
- }
-
  .menu-container h3 {
      text-align: center;
      margin-bottom: 25px;
@@ -27,9 +17,12 @@
      flex: 1;
  }
 
+ .menu-button {
+     text-align: center;
+ }
+
  .delivery {
      margin-top: 25px;
-     margin-bottom: 50px;
      color: #8c1b1b;
  }
 
@@ -62,8 +55,8 @@
 
  .menu-slide-container .slide-track {
      display: flex;
-     animation: scroll 40s linear infinite;
-     -webkit-animation: scroll 40s linear infinite;
+     animation: scroll 60s linear infinite;
+     -webkit-animation: scroll 60s linear infinite;
      width: calc(300px * 14);
  }
 
