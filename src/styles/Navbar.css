@@ -1,4 +1,6 @@
 /* Navbar.css */
+
+
 .navbar {
     font-family: 'Calibre-Bold', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
     letter-spacing: 0.2em;
@@ -11,7 +13,7 @@
     font-family: 'Calibre-Bold', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
     letter-spacing: 0.2em;
     font-size: smaller;
-    
+
 }
 
 .mb-3 {
@@ -30,7 +32,7 @@
 }
 
 div.dropdown-menu.show {
-    border:none;
+    border: none;
     border-radius: 1px;
 }
 
@@ -41,20 +43,21 @@ div.dropdown-menu.show {
 }
 
 .logo1 {
+    margin: 0 !important;
     max-width: 50px;
 }
 
 @media (max-width: 767px) {
     .logo2 {
+        margin: 0 !important;
         display: inline;
         vertical-align: middle;
-        margin-right: 10px;
     }
 }
 
-
 .logo2 {
     max-width: 200px;
+    margin: 0 !important;
 }
 
 
@@ -67,8 +70,8 @@ div.dropdown-menu.show {
     /* Color del texto */
 }
 
-.links{
-    margin-left: 25px;
+.links {
+    margin-right: 25px;
 }
 
 
