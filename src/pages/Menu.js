@@ -45,12 +45,12 @@ function Menu() {
                 </div>
 
                 <div className="menu-item">
-                    <div className="menu"><p>Alitas en Salsa BBQ Coreana</p></div >
+                    <div className="menu sold-out"><p>Alitas en Salsa BBQ Coreana</p></div >
                     <div className="price"><p>8</p></div>
                 </div>
 
                 <div className="menu-item">
-                    <div className="menu"><p>Pollo Miel y Ajonjolí</p></div>
+                    <div className="menu sold-out"><p>Pollo Miel y Ajonjolí</p></div>
                     <div className="price"><p>12</p></div>
                 </div>
 

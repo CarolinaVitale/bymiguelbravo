@@ -1,3 +1,7 @@
+ .sold-out {
+    text-decoration: line-through;
+ }
+ 
  .menu-item {
      display: flex;
      justify-content: space-between;
