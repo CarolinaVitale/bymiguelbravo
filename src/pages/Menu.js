@@ -35,6 +35,11 @@ function Menu() {
                 <br />
 
                 <div className="menu-item">
+                    <div className="menu sold-out"><p>Ración de Lumpias (2)</p></div >
+                    <div className="price"><p>4</p></div>
+                </div>
+
+                <div className="menu-item">
                     <div className="menu"><p>Arroz Pollo, Jamón y Camarón</p></div >
                     <div className="price"><p>12</p></div>
                 </div>
