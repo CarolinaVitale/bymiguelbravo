@@ -35,7 +35,7 @@ function Menu() {
                 <br />
 
                 <div className="menu-item">
-                    <div className="menu sold-out"><p>Ración de Lumpias (2)</p></div >
+                    <div className="menu"><p>Ración de Lumpias (2)</p></div >
                     <div className="price"><p>4</p></div>
                 </div>
 
@@ -50,12 +50,12 @@ function Menu() {
                 </div>
 
                 <div className="menu-item">
-                    <div className="menu sold-out"><p>Alitas en Salsa BBQ Coreana</p></div >
+                    <div className="menu"><p>Alitas en Salsa BBQ Coreana</p></div >
                     <div className="price"><p>8</p></div>
                 </div>
 
                 <div className="menu-item">
-                    <div className="menu sold-out"><p>Pollo Miel y Ajonjolí</p></div>
+                    <div className="menu"><p>Pollo Miel y Ajonjolí</p></div>
                     <div className="price"><p>12</p></div>
                 </div>
 
