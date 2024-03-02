@@ -11,6 +11,12 @@
      margin-right: 20px;
  }
 
+
+ .new {
+    width: 40px;
+    height: auto;
+}
+
  .menu-container h3 {
      text-align: center;
      margin-bottom: 25px;

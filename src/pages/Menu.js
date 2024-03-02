@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Spinner from "../components/Spinner";
 import "../styles/Menu.css";
 import MenuSlide from "../components/MenuSlide";
+// import newItem from "../images/new.png";
 
 
 function Menu() {
@@ -55,8 +56,19 @@ function Menu() {
                 </div>
 
                 <div className="menu-item">
+                    <div className="menu"><p>Alitas Garlic-Parmesan (ajo y parmesano)</p></div >
+                    
+                    <div className="price"><p>10</p></div>
+                </div>
+
+                <div className="menu-item">
                     <div className="menu"><p>Pollo Miel y Ajonjolí</p></div>
                     <div className="price"><p>12</p></div>
+                </div>
+
+                <div className="menu-item">
+                    <div className="menu"><p>Pollo Garlic-Parmesan (ajo y parmesano)</p></div>
+                    <div className="price"><p>14</p></div>
                 </div>
 
                 <div className="menu-item">
