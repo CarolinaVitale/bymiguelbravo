@@ -11,11 +11,12 @@
      margin-right: 20px;
  }
 
+  .menu-item  .new {
+    color: #b71717;
+    font-weight: bolder;
+    margin-left: 10px;
+  }
 
- .new {
-    width: 40px;
-    height: auto;
-}
 
  .menu-container h3 {
      text-align: center;
