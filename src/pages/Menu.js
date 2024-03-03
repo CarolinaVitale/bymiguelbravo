@@ -72,7 +72,7 @@ function Menu() {
                 </div>
 
                 <div className="menu-item">
-                    <div className="menu"><p>Lomito en Salsa de Ostras</p></div>
+                    <div className="menu sold-out"><p>Lomito en Salsa de Ostras</p></div>
                     <div className="price"><p>16</p></div>
                 </div>
 
