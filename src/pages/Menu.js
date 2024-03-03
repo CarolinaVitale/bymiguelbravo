@@ -5,6 +5,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Spinner from "../components/Spinner";
 import "../styles/Menu.css";
 import MenuSlide from "../components/MenuSlide";
+import Carousel from "react-bootstrap/Carousel";
+import pic from "../images/ch-1.jpeg";
+import pic2 from "../images/ch2.jpeg";
+import pic3 from "../images/ch3.jpeg";
+import pic4 from "../images/ch-4.jpeg";
+import pic5 from "../images/ch-5.jpeg";
+import pic6 from "../images/ch-6.jpeg";
+import pic7 from "../images/ch-7.jpeg";
+import pic8 from "../images/ch-8.jpeg";
+import pic9 from "../images/ch-9.jpeg";
+import pic10 from "../images/pollo-garlic.jpg";
 
 
 function Menu() {
@@ -100,8 +111,93 @@ function Menu() {
                         <button href='' className='grey-button'>Haz tu pedido aquí</button>
                     </a>
                 </div>
+                <br/>
+                <br />
+                <br />
+                <br />
+
+                <div className='menu-carousel'>
+                    <Carousel slide={false}>
+                        <Carousel.Item>
+                            <img src={pic} alt='asian'></img>
+                            <Carousel.Caption>
+                                <h3>SOPA WANTON</h3>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+
+                        <Carousel.Item>
+                            <img src={pic2} alt='asian'></img>
+                            <Carousel.Caption>
+                                <h3>ENSALADA DE PEPINO</h3>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+
+                        <Carousel.Item>
+                            <img src={pic3} alt='asian'></img>
+                            <Carousel.Caption>
+                                <h3>LUMPIAS</h3>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+
+                        <Carousel.Item>
+                            <img src={pic4} alt='asian'></img>
+                            <Carousel.Caption>
+                                <h3>ARROZ</h3>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+
+                        <Carousel.Item>
+                            <img src={pic5} alt='asian'></img>
+                            <Carousel.Caption>
+                                <h3>TALLARINES</h3>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+
+                        <Carousel.Item>
+                            <img src={pic6} alt='asian'></img>
+                            <Carousel.Caption>
+                                <h3>POLLO MIEL Y AJONJOLÍ</h3>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+
+                        <Carousel.Item>
+                            <img src={pic10} alt='asian'></img>
+                            <Carousel.Caption>
+                                <h3>POLLO GARLIC-PARMESAN</h3>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+
+                        <Carousel.Item>
+                            <img src={pic7} alt='asian'></img>
+                            <Carousel.Caption>
+                                <h3>LOMITO EN SALSA DE OSTRAS</h3>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+
+                        <Carousel.Item>
+                            <img src={pic8} alt='asian'></img>
+                            <Carousel.Caption>
+                                <h3>ALAS EN BBQ COREANA</h3>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+
+                        <Carousel.Item>
+                            <img src={pic9} alt='asian'></img>
+                            <Carousel.Caption>
+                                <h3>PANCETA CROCANTE</h3>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                    </Carousel>
+                    <br />
+
+                    <br />
+                </div>
+
             </div>
+               
             
+
+
             <br />
             <br />
             <br />

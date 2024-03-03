@@ -10,6 +10,7 @@ import pic6 from "../images/ch-6.jpeg";
 import pic7 from "../images/ch-7.jpeg";
 import pic8 from "../images/ch-8.jpeg";
 import pic9 from "../images/ch-9.jpeg";
+import pic10 from  "../images/pollo-garlic.jpg";
 
 import ceviche from "../images/ceviche.jpeg";
 import ceviche2 from "../images/ceviche2.jpeg";
@@ -123,6 +124,12 @@ function Services() {
                             <img src={pic6} alt='asian'></img>
                             <Carousel.Caption>
                                 <h3>POLLO MIEL Y AJONJOLÍ</h3>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img src={pic10} alt='asian'></img>
+                            <Carousel.Caption>
+                                <h3>POLLO GARLIC-PARMESAN</h3>
                             </Carousel.Caption>
                         </Carousel.Item>
 
