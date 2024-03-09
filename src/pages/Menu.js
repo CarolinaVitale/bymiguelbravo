@@ -85,20 +85,20 @@ function Menu() {
                 </div>
 
                 <div className="menu-item">
-                    <div className="menu"><p>Lomito en Salsa de Ostras</p></div>
-                    <div className="price"><p>16</p></div>
-                </div>
-
-                <div className="menu-item">
                     <div className="menu"><p>Bites de Costillas Agridulce con Piña y Pimentón</p></div>
                     <p className="new">nuevo</p>
                     <div className="price"><p>15</p></div>
                 </div>
 
                 <div className="menu-item">
-                    <div className="menu"><p>Panceta Crocante</p></div>
+                    <div className="menu"><p>Lomito en Salsa de Ostras</p></div>
                     <div className="price"><p>16</p></div>
                 </div>
+
+                {/* <div className="menu-item">
+                    <div className="menu"><p>Panceta Crocante</p></div>
+                    <div className="price"><p>16</p></div>
+                </div>*/}
 
                 <h3>Especial de la Semana</h3>
 
