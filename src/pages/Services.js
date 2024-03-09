@@ -11,6 +11,7 @@ import pic7 from "../images/ch-7.jpeg";
 import pic8 from "../images/ch-8.jpeg";
 import pic9 from "../images/ch-9.jpeg";
 import pic10 from  "../images/pollo-garlic.jpg";
+import pic11 from "../images/costillas.jpeg";
 
 import ceviche from "../images/ceviche.jpeg";
 import ceviche2 from "../images/ceviche2.jpeg";
@@ -144,6 +145,13 @@ function Services() {
                             <img src={pic8} alt='asian'></img>
                             <Carousel.Caption>
                                 <h3>ALAS EN BBQ COREANA</h3>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+
+                        <Carousel.Item>
+                            <img src={pic11} alt='asian'></img>
+                            <Carousel.Caption>
+                                <h3>BITES DE COSTILLA</h3>
                             </Carousel.Caption>
                         </Carousel.Item>
 

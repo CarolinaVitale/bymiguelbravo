@@ -16,6 +16,8 @@ import pic7 from "../images/ch-7.jpeg";
 import pic8 from "../images/ch-8.jpeg";
 import pic9 from "../images/ch-9.jpeg";
 import pic10 from "../images/pollo-garlic.jpg";
+import pic11 from "../images/costillas.jpeg";
+
 
 
 function Menu() {
@@ -47,7 +49,7 @@ function Menu() {
 
                 <div className="menu-item">
                     <div className="menu"><p>Ración de Lumpias (2)</p></div >
-                    <div className="price"><p>4</p></div>
+                    <div className="price"><p>5</p></div>
                 </div>
 
                 <div className="menu-item">
@@ -60,16 +62,16 @@ function Menu() {
                     <div className="price"><p>11</p></div>
                 </div>
 
-                <div className="menu-item">
+                {/* <div className="menu-item">
                     <div className="menu"><p>Alitas en Salsa BBQ Coreana</p></div >
                     <div className="price"><p>8</p></div>
-                </div>
+                </div> */}
 
-                <div className="menu-item">
+                {/* <div className="menu-item">
                     <div className="menu"><p>Alitas Garlic-Parmesan (ajo y parmesano)</p></div >
                     <p className="new">nuevo</p>
                     <div className="price"><p>10</p></div>
-                </div>
+                </div> */}
 
                 <div className="menu-item">
                     <div className="menu"><p>Pollo Miel y Ajonjolí</p></div>
@@ -83,8 +85,14 @@ function Menu() {
                 </div>
 
                 <div className="menu-item">
-                    <div className="menu sold-out"><p>Lomito en Salsa de Ostras</p></div>
+                    <div className="menu"><p>Lomito en Salsa de Ostras</p></div>
                     <div className="price"><p>16</p></div>
+                </div>
+
+                <div className="menu-item">
+                    <div className="menu"><p>Bites de Costillas Agridulce con Piña y Pimentón</p></div>
+                    <p className="new">nuevo</p>
+                    <div className="price"><p>15</p></div>
                 </div>
 
                 <div className="menu-item">
@@ -99,6 +107,9 @@ function Menu() {
                     <div className="price"><p>16</p></div>
                 </div>
 
+                <br />
+                <br />
+                
                 <div className="menu-item">
                     <div className="menu"><p className="delivery">Delivery</p></div>
                     <div className="price"><p className="delivery">2</p></div>
@@ -178,6 +189,13 @@ function Menu() {
                             <img src={pic8} alt='asian'></img>
                             <Carousel.Caption>
                                 <h3>ALAS EN BBQ COREANA</h3>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+
+                        <Carousel.Item>
+                            <img src={pic11} alt='asian'></img>
+                            <Carousel.Caption>
+                                <h3>BITES DE COSTILLA</h3>
                             </Carousel.Caption>
                         </Carousel.Item>
 
