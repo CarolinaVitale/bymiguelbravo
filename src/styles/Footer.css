@@ -1,18 +1,15 @@
 .footer {
     width: 100%;
-    background-color: rgb(40, 40, 40);
-    padding-bottom: 30px;
-}
-
-.fixed {
-    position: fixed;
-    bottom: 0;
+    background-color: #202028;
+    padding: 58px 24px 34px;
+    border-top: 1px solid rgba(255,255,255,.08);
 }
 
 .footer .content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 22px;
 }
 
 .footer p {
@@ -21,9 +18,23 @@
     text-align: center;
 }
 
+.footer .media {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:auto;
+    padding:0;
+    background:transparent;
+}
+
+.footer .media a { display:grid; place-items:center; width:44px; height:44px; border:1px solid rgba(255,255,255,.22); border-radius:50%; }
+.footer .media img { width:17px; height:17px; max-width:none; padding:0; }
+
 .footer .location img {
-    max-width: 10px;
-    height: 100%;
+    width: 12px;
+    height: 16px;
+    max-width: none;
+    object-fit: contain;
 }
 
 .location {

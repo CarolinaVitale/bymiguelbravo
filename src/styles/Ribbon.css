@@ -1,0 +1,7 @@
+.brand-ribbon{overflow:hidden;padding:9px 0;background:#ce981f;color:#202028;border-block:1px solid rgba(32,32,40,.18)}
+.brand-ribbon-light{background:#f3efe5}
+.brand-ribbon-track{display:flex;width:max-content;align-items:center;animation:ribbon-scroll 28s linear infinite;will-change:transform}
+.brand-ribbon span{padding:0 25px;font-family:Georgia,serif;font-size:clamp(15px,1.6vw,22px);font-style:italic;white-space:nowrap}
+.brand-ribbon b{font-size:9px;font-weight:400}
+@keyframes ribbon-scroll{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.brand-ribbon-track{animation:none}}

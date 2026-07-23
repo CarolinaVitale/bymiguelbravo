@@ -1,226 +1,62 @@
-import React, { useState, useEffect } from "react";
-import "../styles/App.css";
-import "../styles/Buttons.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Spinner from "../components/Spinner";
+import React from "react";
 import "../styles/Menu.css";
-import MenuSlide from "../components/MenuSlide";
-import Carousel from "react-bootstrap/Carousel";
-import pic from "../images/ch-1.jpeg";
-import pic2 from "../images/ch2.jpeg";
-import pic3 from "../images/ch3.jpeg";
-import pic4 from "../images/ch-4.jpeg";
-import pic5 from "../images/ch-5.jpeg";
-import pic6 from "../images/ch-6.jpeg";
-import pic7 from "../images/ch-7.jpeg";
-import pic8 from "../images/ch-8.jpeg";
-import pic9 from "../images/ch-9.jpeg";
-import pic10 from "../images/pollo-garlic.jpg";
-import pic11 from "../images/costillas.jpeg";
+import signaturePork from "../images/editorial/signature-pork.jpg";
+import crispyBites from "../images/editorial/crispy-bites.jpg";
+import porkPuree from "../images/editorial/pork-puree.jpg";
+import slicedBeef from "../images/editorial/sliced-beef.jpg";
+import chickenSkewer from "../images/editorial/chicken-skewer.jpg";
+import PageMeta from "../components/PageMeta";
+import { Link } from "react-router-dom";
 
-
+const gallery = [
+    [signaturePork, "Chef Miguel Bravo's plated pork with sweet potato purée and pickled onion", "Signature plate"],
+    [crispyBites, "Three crispy bites finished with avocado sauce and scallions", "Small bites"],
+    [porkPuree, "Crispy sliced pork served over a bright seasonal purée", "Layers & contrast"],
+    [slicedBeef, "Sliced beef with a creamy sauce, capers, and fresh arugula", "From the pass"],
+    [chickenSkewer, "Glazed chicken and vegetable skewer presented at Ocho Trece", "Fire & glaze"],
+];
 
 function Menu() {
-    const [isLoading, setIsLoading] = useState(true);
-
-    useEffect(() => {
-        const onLoad = () => {
-            setIsLoading(false);
-        };
-
-        window.addEventListener("load", onLoad);
-
-        // Añadimos un temporizador para asegurarnos de que el spinner se oculte después de un tiempo determinado, incluso si el evento 'load' no se dispara correctamente en Safari
-        const timer = setTimeout(() => {
-            setIsLoading(false);
-        }, 1000); // Cambia este valor según la duración que desees
-
-        return () => {
-            window.removeEventListener("load", onLoad);
-            clearTimeout(timer);
-        };
-    }, []);
-
     return (
-        <div>
-            <MenuSlide />
-            <div className="menu-container">
-                <br />
+        <main id="main-content" className="menu-page">
+            <PageMeta title="Ocho Trece" description="Discover the food, space, and creative energy of Ocho Trece through Chef Miguel Bravo's work in Tampa." />
+            <header className="page-hero menu-hero">
+                <span>Ocho Trece · Tampa</span>
+                <h1>A chapter told <br aria-hidden="true" />through food.</h1>
+                <p>A visual look at the restaurant, the dishes, and the ideas brought to life in Miguel’s kitchen.</p>
+            </header>
 
-                <div className="menu-item">
-                    <div className="menu"><p>Ración de Lumpias (2)</p></div >
-                    <div className="price"><p>5</p></div>
+            <section className="menu-intro" data-reveal>
+                <div>
+                    <span className="section-kicker">Inside Ocho Trece</span>
+                    <h2>Food with a point of view.</h2>
                 </div>
-
-                <div className="menu-item">
-                    <div className="menu"><p>Arroz Pollo, Jamón y Camarón</p></div >
-                    <div className="price"><p>12</p></div>
+                <div className="menu-intro-copy">
+                    <p>This is not a fixed menu. It is a portrait of a creative period: seasonal plates, bold contrasts, and an approach shaped by Asian, Latin American, and European influences.</p>
+                    <a href="https://ochotrece.restaurant/" target="_blank" rel="noreferrer">Visit Ocho Trece <span>↗</span></a>
                 </div>
+            </section>
 
-                <div className="menu-item">
-                    <div className="menu"><p>Tallarines Pollo y Jamón</p></div>
-                    <div className="price"><p>11</p></div>
+            <section className="menu-gallery" aria-labelledby="menu-gallery-title">
+                <div className="menu-gallery-heading" data-reveal>
+                    <span className="section-kicker">From Miguel’s table</span>
+                    <h2 id="menu-gallery-title">A taste of the experience</h2>
                 </div>
-
-                {/* <div className="menu-item">
-                    <div className="menu"><p>Alitas en Salsa BBQ Coreana</p></div >
-                    <div className="price"><p>8</p></div>
-                </div> */}
-
-                {/* <div className="menu-item">
-                    <div className="menu"><p>Alitas Garlic-Parmesan (ajo y parmesano)</p></div >
-                    <p className="new">nuevo</p>
-                    <div className="price"><p>10</p></div>
-                </div> */}
-
-                <div className="menu-item">
-                    <div className="menu"><p>Pollo Miel y Ajonjolí</p></div>
-                    <div className="price"><p>12</p></div>
+                <div className="food-grid">
+                    {gallery.map(([image, alt, label], index) => (
+                        <figure className={`food-grid-item food-grid-item-${index + 1}`} key={image} data-reveal style={{ "--reveal-delay": `${index * 80}ms` }}>
+                            <img src={image} alt={alt} loading="lazy" width="1200" height="1600" />
+                            <figcaption><span>0{index + 1}</span>{label}</figcaption>
+                        </figure>
+                    ))}
                 </div>
+            </section>
 
-                <div className="menu-item">
-                    <div className="menu"><p>Pollo Garlic-Parmesan (ajo y parmesano)</p></div>
-                    <p className="new">nuevo</p>
-                    <div className="price"><p>14</p></div>
-                </div>
-
-                <div className="menu-item">
-                    <div className="menu"><p>Bites de Costillas Agridulce con Piña y Pimentón</p></div>
-                    <p className="new">nuevo</p>
-                    <div className="price"><p>15</p></div>
-                </div>
-
-                <div className="menu-item">
-                    <div className="menu"><p>Lomito en Salsa de Ostras</p></div>
-                    <div className="price"><p>16</p></div>
-                </div>
-
-                {/* <div className="menu-item">
-                    <div className="menu"><p>Panceta Crocante</p></div>
-                    <div className="price"><p>16</p></div>
-                </div>*/}
-
-                <h3>Especial de la Semana</h3>
-
-                <div className="menu-item">
-                    <div className="menu"><p>Callos a la Madrileña</p></div>
-                    <div className="price"><p>16</p></div>
-                </div>
-
-                <br />
-                <br />
-                
-                <div className="menu-item">
-                    <div className="menu"><p className="delivery">Delivery</p></div>
-                    <div className="price"><p className="delivery">2</p></div>
-                </div>
-
-                {isLoading && <Spinner />}
-
-                <div className="menu-button">
-                    <a href='https://wa.me/message/26GNQXJCZ3VVM1' target='_blank' rel="noreferrer">
-                        <button href='' className='grey-button'>Haz tu pedido aquí</button>
-                    </a>
-                </div>
-                <br/>
-                <br />
-                <br />
-                <br />
-
-                <div className='menu-carousel'>
-                    <Carousel slide={false}>
-                        <Carousel.Item>
-                            <img src={pic} alt='asian'></img>
-                            <Carousel.Caption>
-                                <h3>SOPA WANTON</h3>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                            <img src={pic2} alt='asian'></img>
-                            <Carousel.Caption>
-                                <h3>ENSALADA DE PEPINO</h3>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                            <img src={pic3} alt='asian'></img>
-                            <Carousel.Caption>
-                                <h3>LUMPIAS</h3>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                            <img src={pic4} alt='asian'></img>
-                            <Carousel.Caption>
-                                <h3>ARROZ</h3>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                            <img src={pic5} alt='asian'></img>
-                            <Carousel.Caption>
-                                <h3>TALLARINES</h3>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                            <img src={pic6} alt='asian'></img>
-                            <Carousel.Caption>
-                                <h3>POLLO MIEL Y AJONJOLÍ</h3>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                            <img src={pic10} alt='asian'></img>
-                            <Carousel.Caption>
-                                <h3>POLLO GARLIC-PARMESAN</h3>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                            <img src={pic7} alt='asian'></img>
-                            <Carousel.Caption>
-                                <h3>LOMITO EN SALSA DE OSTRAS</h3>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                            <img src={pic8} alt='asian'></img>
-                            <Carousel.Caption>
-                                <h3>ALAS EN BBQ COREANA</h3>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                            <img src={pic11} alt='asian'></img>
-                            <Carousel.Caption>
-                                <h3>BITES DE COSTILLA</h3>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                            <img src={pic9} alt='asian'></img>
-                            <Carousel.Caption>
-                                <h3>PANCETA CROCANTE</h3>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                    </Carousel>
-                    <br />
-
-                    <br />
-                </div>
-
-            </div>
-               
-            
-
-
-            <br />
-            <br />
-            <br />
-            <br />
-        </div>
+            <section className="menu-cta">
+                <p>Bring Miguel’s point of view to your next gathering.</p>
+                <Link to="/services">Explore catering services <span>→</span></Link>
+            </section>
+        </main>
     );
 }
 

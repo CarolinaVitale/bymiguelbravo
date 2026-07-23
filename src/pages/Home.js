@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "../styles/App.css";
-import logo3D from "../images/logotype-3d.png";
 import ImageCarousel from "../components/ImageCarousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Program from "../components/Program";
 import Spinner from "../components/Spinner";
+import PageMeta from "../components/PageMeta";
+import { Link } from "react-router-dom";
+import Ribbon from "../components/Ribbon";
 
 
 function App() {
@@ -29,26 +31,29 @@ function App() {
     }, []);
 
     return (
-        <div className="App">
-            <ImageCarousel className="carousel" />
+        <main id="main-content" className="App">
+            <PageMeta title="Private Chef & Catering in Tampa" description="Private dining, catering, and pop-up dinner experiences by Chef Miguel Bravo in Tampa Bay." />
+            <section className="home-hero" aria-label="Culinary experiences by Miguel Bravo">
+                <ImageCarousel />
+                <div className="home-hero-shade" />
+                <div className="home-hero-content">
+                    <span className="hero-eyebrow">Private chef · Catering · Pop-up dinners</span>
+                    <h1 className="hero-title">A table worth remembering.</h1>
+                    <p>Bold flavors, thoughtful details, and culinary experiences made to be remembered.</p>
+                    <Link
+                        className="contact-button"
+                        to="/contact"
+                    >
+                        Plan your experience
+                    </Link>
+                </div>
+                <span className="hero-scroll" aria-hidden="true">Discover</span>
+            </section>
 
-            <img src={logo3D} className="logo-3d" alt="logo-3d" />
-
-            <a
-
-                href="https://wa.me/message/26GNQXJCZ3VVM1"
-
-                target="_blank"
-
-                rel="noreferrer"
-
-            >
-                <button className="contact-button">Ponte en Contacto</button>
-            </a>
-
+            <Ribbon />
             <Program />
             {isLoading && <Spinner />}
-        </div>
+        </main>
     );
 }
 

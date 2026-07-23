@@ -3,11 +3,15 @@ import { useLocation } from "react-router-dom";
 
 
 function ScrollToTopOnMount() { 
-    const { pathname } = useLocation(); 
+    const { pathname, hash } = useLocation();
     
         useEffect(() => { 
-            window.scrollTo(0, 0); // Hace scroll hacia arriba cuando el componente se monta 
-        }, [pathname]); // Se ejecutará cada vez que cambie la ubicación (ruta) 
+            if (hash) {
+                window.requestAnimationFrame(() => document.querySelector(hash)?.scrollIntoView({ behavior: "smooth", block: "start" }));
+            } else {
+                window.scrollTo(0, 0);
+            }
+        }, [pathname, hash]);
         
         return null;
     } 

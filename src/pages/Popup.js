@@ -1,98 +1,36 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/Popupdinner.css";
-import popup from "../images/catering4.jpeg";
-import popup2 from "../images/carousel1.jpg";
-import popup3 from "../images/carousel2.jpeg";
-import popup5 from "../images/catering.jpeg";
-import popup6 from "../images/catering2.jpg";
-import popup7 from "../images/catering3.jpeg";
-import popup8 from "../images/popupgif.gif";
-import popup9 from "../images/popupdinner.jpg";
-import popup10 from "../images/popupdinner2.jpg";
-import popup11 from "../images/popupdinner3.jpg";
-import popup12 from "../images/popupdinner4.jpg";
-import Spinner from "../components/Spinner";
-import "../styles/App.css";
-
+import hero from "../images/popupdinner4.jpg";
+import dinner from "../images/carousel1.jpg";
+import table from "../images/popupdinner2.jpg";
+import detail from "../images/popupdinner3.jpg";
+import PageMeta from "../components/PageMeta";
 
 function Popup() {
-    const [isLoading, setIsLoading] = useState(true);
-
-    useEffect(() => {
-        const onLoad = () => {
-            setIsLoading(false);
-        };
-
-        window.addEventListener("load", onLoad);
-
-        // Añadimos un temporizador para asegurarnos de que el spinner se oculte después de un tiempo determinado, incluso si el evento 'load' no se dispara correctamente en Safari
-        const timer = setTimeout(() => {
-            setIsLoading(false);
-        }, 1000); // Cambia este valor según la duración que desees
-
-        return () => {
-            window.removeEventListener("load", onLoad);
-            clearTimeout(timer);
-        };
-    }, []);
-
     return (
-        <div className='pop-up-dinner'>
-            <img className='pop-up-top' src={popup12} alt='pop-up-dinner' ></img>
-
-            <br />
-            <div className="wrapper-pop">
-                <div className="typing-demo-pop">
-                    POP UP DINNER.
-                </div>
-            </div>
-            <br />
-            <p>
-                Una POP-UP DINNER es un evento culinario efímero y exclusivo que ofrece una experiencia gastronómica única.
-            </p>
-            <br />
-
-            <img className='pop-up-pic' src={popup2} alt='pop-up-dinner'></img>
-
-            <br />
-            <p>
-                Imagina una cena clandestina en un lugar inesperado donde Miguel se encargó de organizar dos ediciones de esta cena, cada una compuesta por ocho exquisitos tiempos, cada uno cuidadosamente elaborado para resaltar sabores, texturas y técnicas culinarias innovadoras y estuvieron acompañados de maridajes cuidadosamente seleccionados.
-            </p>
-            <br />
-
-            <img className='pop-up-pic' src={popup3} alt='pop-up-dinner'></img>
-
-            <br />
-            <p>
-                Este evento atrajo a una audiencia ávida de explorar nuevos sabores y experiencias culinarias, mientras disfrutaban de una atmósfera íntima y emocionante. Fue una ocasión especial que rompió con lo convencional, ofreciendo una propuesta disruptiva y emocionante.
-            </p>
-            <br />
-
-            <img className='pop-up-pic' src={popup10} alt='pop-up-dinner'></img>
-
-            <br />
-            <p>
-                Miguel se encargó de todos los aspectos del evento, desde la planificación y la preparación de los platos hasta la presentación y el servicio, garantizando una experiencia memorable y personalizada para todos los asistentes.
-            </p>
-            <br />
-
-            <img className='pop-up-pic' src={popup9} alt='pop-up-dinner' ></img>
-
-            <img className='pop-up-pic' src={popup} alt='pop-up-dinner' ></img>
-
-            <img className='pop-up-pic' src={popup8} alt='pop-up-dinner' ></img>
-
-            <img className='pop-up-pic' src={popup5} alt='pop-up-dinner' ></img>
-
-            <img className='pop-up-pic' src={popup6} alt='pop-up-dinner' ></img>
-
-            <img className='pop-up-pic' src={popup7} alt='pop-up-dinner' ></img>
-
-            <img className='pop-up-pic' src={popup11} alt='pop-up-dinner' ></img>
-            {isLoading && <Spinner />}
-        </div>
+        <main id="main-content" className="events-page">
+            <PageMeta title="Pop-up Dinner Events" description="Discover limited-seat pop-up dinners and private culinary events by Chef Miguel Bravo in Tampa." />
+            <header className="event-hero" style={{ backgroundImage: `url(${hero})` }}>
+                <div><span>Limited-seat culinary experiences</span><h1>Pop-up <br aria-hidden="true" />dinners.</h1></div>
+            </header>
+            <section className="event-story">
+                <span className="section-kicker">An evening out of the ordinary</span>
+                <h2>One table. One menu. <br aria-hidden="true" />One night only.</h2>
+                <p>Miguel’s pop-up dinners are intimate, temporary culinary experiences staged in unexpected spaces. Each edition features a carefully paced tasting menu built around seasonality, technique, and surprise.</p>
+            </section>
+            <section className="event-gallery">
+                <img src={dinner} alt="Guests at a Miguel Bravo pop-up dinner" loading="lazy" width="1200" height="900" />
+                <img src={table} alt="Pop-up dinner table setting" loading="lazy" width="900" height="700" />
+                <img src={detail} alt="A dish served at a pop-up dinner" loading="lazy" width="900" height="700" />
+            </section>
+            <section className="event-details">
+                <div><span>What to expect</span><h2>A complete experience</h2></div>
+                <div><p>Seasonal multi-course tasting menu</p><p>Thoughtful beverage pairings</p><p>Intimate, limited seating</p><p>A unique Tampa location</p></div>
+            </section>
+            <section className="event-cta"><h2>Join the next table.</h2><p>Contact us for upcoming dates or to create a private edition.</p><Link to="/contact">Request details <span>→</span></Link></section>
+        </main>
     );
 }
-
 
 export default Popup;

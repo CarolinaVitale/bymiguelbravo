@@ -3,89 +3,55 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import logo from "../images/logo.png";
-import logo2 from "../images/logo-efect.png";
+import logo from "../images/brand/mb-white.png";
+import logo2 from "../images/brand/miguel-bravo-white.png";
 import "../styles/Navbar.css";
-import { Link, useNavigate } from "react-router-dom";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import { Link, NavLink } from "react-router-dom";
 
+const destinations = [
+    ["Ocho Trece", "/menu"],
+    ["About", "/about"],
+    ["Services", "/services"],
+    ["Contact", "/contact"],
+];
 
 function NavbarOff() {
-
     const [show, setShow] = useState(false);
-    const navigate = useNavigate();
-
-
-    const closeNav = () => {
-        setShow(false);
-    };
-
+    const closeNav = () => setShow(false);
 
     return (
-        <>
-            {["sm"].map((expand) => (
-                <Navbar key={expand} expand={expand} className="navbar bg-body-tertiary mb-3">
-                    <Container fluid>
-                        <Navbar.Brand as={Link} to='/' onClick={closeNav}>
-                            <img className='logo1' src={logo} alt='logo'></img>
-                        </Navbar.Brand>
-
-                        <Nav.Link as={Link} to="/" onClick={() => { closeNav(); navigate("/"); }}>
-                            <img className='logo2' src={logo2} style={{ maxWidth: "150px" }} alt='logo'></img>
-                        </Nav.Link>
-
-                        <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} onClick={() => setShow(!show)} />
-
-                        <Navbar.Offcanvas
-                            show={show}
-                            onHide={() => setShow(false)}
-                            id={`offcanvasNavbar-expand-${expand}`}
-                            aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
-                            placement="end"
-                        >
-
-                            <Offcanvas.Header closeButton>
-
-                                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-
-                                    <Nav.Link className='links' as={Link} to="/" onClick={() => { closeNav(); navigate("/"); }}>
-                                        <img src={logo2} style={{ maxWidth: "150px" }} alt='logo'></img>
-                                    </Nav.Link>
-
-                                </Offcanvas.Title>
-
-                            </Offcanvas.Header>
-
-                            <Offcanvas.Body>
-
-                                <Nav className="justify-content-end flex-grow-1 pe-3">
-                                    <Nav.Link className='links' as={Link} to="/menu" onClick={() => { closeNav(); navigate("/menu"); }}>Menú</Nav.Link>
-                                    <Nav.Link className='links' as={Link} to="/sobremi" onClick={() => { closeNav(); navigate("/sobremi"); }}>Sobre mi</Nav.Link>
-                                    <Nav.Link className='links' as={Link} to="/servicios" onClick={() => { closeNav(); navigate("/servicios"); }}>Servicios</Nav.Link>
-                                    <Nav.Link className='links' as={Link} to="/contacto" onClick={() => { closeNav(); navigate("/contacto"); }}>Contáctanos</Nav.Link>
-                                    {/* navbar drop  */}
-
-                                    <NavDropdown className='links' title="Eventos" id="basic-nav-dropdown">
-                                        <NavDropdown.Item className='links-drop' as={Link} to="/popupdinner" onClick={() => { closeNav(); navigate("/popupdinner"); }}>Pop-up Dinner</NavDropdown.Item>
-                                    </NavDropdown>
-                                    {/* navbar drop end  */}
-                                </Nav>
-                            </Offcanvas.Body>
-
-                        </Navbar.Offcanvas>
-
-                    </Container>
-
-                </Navbar>
-
-            ))}
-
-        </>
-
+        <Navbar expand="lg" className="site-navbar" sticky="top" data-bs-theme="dark">
+            <Container fluid>
+                <Navbar.Brand as={Link} to="/" onClick={closeNav} aria-label="Miguel Bravo — Home">
+                    <img className="logo1" src={logo} alt="" width="50" height="50" />
+                </Navbar.Brand>
+                <Link className="navbar-wordmark" to="/" onClick={closeNav} aria-label="Miguel Bravo — Home">
+                    <img className="logo2" src={logo2} alt="" width="175" height="60" />
+                </Link>
+                <Navbar.Toggle aria-controls="primary-navigation" aria-expanded={show} aria-label={show ? "Close navigation" : "Open navigation"} onClick={() => setShow(!show)} />
+                <Navbar.Offcanvas show={show} onHide={closeNav} id="primary-navigation" aria-labelledby="primary-navigation-title" placement="end">
+                    <Offcanvas.Header closeButton>
+                        <Offcanvas.Title id="primary-navigation-title">Explore</Offcanvas.Title>
+                    </Offcanvas.Header>
+                    <Offcanvas.Body>
+                        <Nav className="primary-nav justify-content-end flex-grow-1" aria-label="Primary navigation">
+                            {destinations.map(([label, path]) => (
+                                <Nav.Link
+                                    key={path}
+                                    as={NavLink}
+                                    to={path}
+                                    onClick={closeNav}
+                                    className={({ isActive }) => `links${isActive ? " active" : ""}${path === "/contact" ? " nav-contact" : ""}`}
+                                >
+                                    {label}
+                                </Nav.Link>
+                            ))}
+                        </Nav>
+                    </Offcanvas.Body>
+                </Navbar.Offcanvas>
+            </Container>
+        </Navbar>
     );
-
 }
-
-
 
 export default NavbarOff;

@@ -1,5 +1,5 @@
 /* Navbar.css */
-nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
+nav.site-navbar {
     margin-bottom: 0 !important;
 }
 
@@ -32,6 +32,47 @@ nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
     padding: 0 !important;
 }
 
+nav.navbar {
+    min-height: 64px;
+    padding: 6px 18px !important;
+    background: #202028 !important;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.navbar a,.navbar .nav-link,.navbar-nav .nav-link.active { color:#f5efe4 !important; }
+.navbar a::before { border-bottom-color:#ce981f; background-color:#ce981f; }
+.navbar-toggler { width:46px; height:42px; padding:8px; border:1px solid rgba(245,239,228,.4) !important; border-radius:0 !important; background:transparent !important; box-shadow:none !important; }
+.navbar-toggler:focus-visible { outline:2px solid #ce981f; outline-offset:3px; }
+.navbar-toggler-icon { width:24px; height:24px; }
+.nav-contact { color:#ce981f !important; }
+.logo1,.logo2 { filter:none; object-fit:contain; }
+.offcanvas { background:#202028 !important; }.offcanvas .btn-close{filter:invert(1)}
+
+.navbar .container-fluid { max-width: 1440px; }
+
+.navbar .nav-link.active { color: #ce981f !important; }
+.navbar .nav-link.active::before { transform: scaleX(1); }
+.offcanvas-title { color: #f5efe4; font-family: Georgia, serif; }
+.navbar-wordmark { display: flex; align-items: center; }
+.navbar-brand { display:none; }
+
+@media (max-width: 991px) {
+    nav.navbar { min-height: 58px; padding: 4px 10px !important; }
+    .logo1 { max-width: 42px; }
+    .logo2 { max-width: 136px !important; }
+    .navbar-brand { display:flex; margin-right:auto !important; }
+    .navbar-wordmark { display:none; }
+    .offcanvas { width:min(100%,430px) !important; border-left:1px solid rgba(255,255,255,.1) !important; }
+    .offcanvas-header { min-height:86px; padding:22px 26px; border-bottom:1px solid rgba(255,255,255,.1); }
+    .offcanvas-title { font-size:30px; font-weight:400; }
+    .offcanvas-body { display:flex; align-items:center; padding:30px 28px 50px !important; }
+    .primary-nav { width:100%; padding:0 !important; }
+    .primary-nav .nav-link { display:flex; align-items:center; justify-content:space-between; min-height:64px; margin:0 !important; padding:14px 0 !important; border-bottom:1px solid rgba(255,255,255,.12); font-family:Georgia,serif; font-size:clamp(30px,9vw,44px); font-weight:400; letter-spacing:-.025em; line-height:1; text-transform:none; }
+    .primary-nav .nav-link::after { content:'\2197'; color:#ce981f; font-family:Arial,sans-serif; font-size:18px; }
+    .primary-nav .nav-link::before { display:none; }
+    .primary-nav .nav-link.active { padding-left:14px !important; border-left:2px solid #ce981f; }
+}
+
 .links-drop {
     font-family: 'Calibre-Bold', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
     letter-spacing: 0.2em;
@@ -43,7 +84,7 @@ nav.navbar.bg-body-tertiary.mb-3.navbar.navbar-expand-sm.navbar-light {
     margin-bottom: 0 !important;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
     .dropdown-menu {
         background-color: #f8f9fa;
     }
@@ -67,22 +108,24 @@ div.dropdown-menu.show {
 
 .logo1 {
     margin: 0 !important;
+    width: 46px;
+    height: 46px;
     max-width: 50px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
     .logo2 {
         margin: 0 !important;
         display: inline;
         vertical-align: middle;
     }
 
-    div.offcanvas-body {
-        margin-left: 40px;
-    }
+    div.offcanvas-body { margin-left:0; }
 }
 
 .logo2 {
+    width: 175px;
+    height: auto;
     max-width: 200px;
     margin: 0 !important;
 }
@@ -99,7 +142,7 @@ div.dropdown-menu.show {
     margin-right: 25px;
 }
 
-.navbar a::before {
+.navbar .nav-link::before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -119,7 +162,7 @@ div.dropdown-menu.show {
 
 
 
-.navbar a:hover::before {
+.navbar .nav-link:hover::before {
     transform: scaleX(1);
     /* Aparece con la animación de izquierda a derecha al hacer hover */
 }

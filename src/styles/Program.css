@@ -1,5 +1,6 @@
 /*  P R O G R A M  */
-.program h1 {
+.program h1,
+.program h2 {
     padding: 10px 10px 10px;
     text-align: center;
 }
@@ -18,16 +19,130 @@
     text-align: center;
 }
 
+/* Home content — modular editorial sections */
+.program-section {
+    display: grid;
+    grid-template-columns: minmax(280px, .82fr) minmax(440px, 1.18fr);
+    min-height: 650px;
+    padding: 0;
+    background: #f5f3ee;
+    text-align: left;
+}
+
+.program-section.catering {
+    grid-template-columns: minmax(440px, 1.18fr) minmax(280px, .82fr);
+    padding: 0;
+    background: #20201c;
+}
+
+.program-section.popup-div {
+    padding: 0;
+    background: #e8e1d6;
+    text-align: left;
+}
+
+.program-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: clamp(56px, 8vw, 120px);
+}
+
+.program .program-copy h1,
+.program .program-copy h2 {
+    max-width: 520px;
+    margin: 22px 0 24px;
+    padding: 0;
+    color: #25251f;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(38px, 5vw, 70px);
+    font-weight: 400;
+    letter-spacing: -.035em;
+    line-height: 1.02;
+    text-align: left;
+    text-transform: none;
+}
+
+.program .program-copy p {
+    max-width: 450px;
+    margin: 0 0 36px;
+    padding: 0;
+    color: #67675f;
+    font-size: 14px;
+    letter-spacing: .08em;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.program-section.catering .program-copy h1,
+.program-section.catering .program-copy h2 { color: #f4f0e8; }
+.program-section.catering .program-copy p { color: rgba(255,255,255,.6); }
+
+.program-visual,
+.program-carousel {
+    min-width: 0;
+    height: 650px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.program-visual img,
+.program-carousel .carousel,
+.program-carousel .carousel-inner,
+.program-carousel .carousel-item,
+.program-carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.program-link {
+    display: inline-flex;
+    gap: 18px;
+    align-items: center;
+    padding-bottom: 8px;
+    border-bottom: 1px solid currentColor;
+    color: #25251f;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .22em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: gap .2s ease, opacity .2s ease;
+}
+
+.program-section.catering .program-link { color: #d3b78d; }
+.program-link:hover { gap: 26px; color: inherit; opacity: .7; }
+
+@media (max-width: 767px) {
+    .program-section,
+    .program-section.catering {
+        grid-template-columns: 1fr;
+        min-height: 0;
+    }
+    .program-section.catering .program-visual { order: 2; }
+    .program-section.catering .program-copy { order: 1; }
+    .program-copy { padding: 64px 26px; }
+    .program .program-copy h1,
+    .program .program-copy h2 { margin: 16px 0 20px; font-size: clamp(38px, 12vw, 54px); }
+    .program-visual,
+    .program-carousel { height: min(72vh, 560px); margin: 0; }
+    .program-carousel img { height: 100%; }
+}
+
 .catering {
     padding-bottom: 60px;
     padding-top: 60px;
 }
 
-.catering h1 {
+.catering h1,
+.catering h2 {
     color: #444;
 }
 
-.bio h1 {
+.bio h1,
+.bio h2 {
     font-family: 'Calibre-Bold', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
     letter-spacing: 0.2em;
 }
@@ -109,6 +224,13 @@
     letter-spacing: 0.2em;
 }
 
+/* Keep the modern grid from being overridden by the legacy section classes below. */
+.program .program-section.bio,
+.program .program-section.catering,
+.program .program-section.popup-div { padding:0; }
+.program .program-carousel { margin:0; }
+.program .chef-story-image { object-position:center 48%; }
+
 /*   R I B B O N  */
 .slide-container {
     background-color: #f1f1f1;
@@ -148,3 +270,13 @@
 }
 
 /*   E N D     R I B B O N  */
+
+/* These sections own their spacing; neutralize the previous page layout rules. */
+.program .program-section {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.program .program-section .program-carousel {
+    margin: 0;
+}

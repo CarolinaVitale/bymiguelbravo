@@ -1,232 +1,67 @@
-import React, { useState, useEffect } from "react";
-import Carousel from "react-bootstrap/Carousel";
+import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/App.css";
-import pic from "../images/ch-1.jpeg";
-import pic2 from "../images/ch2.jpeg";
-import pic3 from "../images/ch3.jpeg";
-import pic4 from "../images/ch-4.jpeg";
-import pic5 from "../images/ch-5.jpeg";
-import pic6 from "../images/ch-6.jpeg";
-import pic7 from "../images/ch-7.jpeg";
-import pic8 from "../images/ch-8.jpeg";
-import pic9 from "../images/ch-9.jpeg";
-import pic10 from  "../images/pollo-garlic.jpg";
-import pic11 from "../images/costillas.jpeg";
+import "../styles/Menu.css";
+import featuredDish from "../images/editorial/beef-green-sauce-vertical.jpg";
+import empanadas from "../images/editorial/empanadas.jpg";
+import octopus from "../images/editorial/octopus-special-clean.jpg";
+import PageMeta from "../components/PageMeta";
+import dinner from "../images/carousel1.jpg";
+import table from "../images/popupdinner2.jpg";
+import detail from "../images/popupdinner3.jpg";
+import "../styles/Popupdinner.css";
 
-import ceviche from "../images/ceviche.jpeg";
-import ceviche2 from "../images/ceviche2.jpeg";
-
-import italia from "../images/italian.jpeg";
-import italia3 from "../images/italian3.jpeg";
-import italia4 from "../images/italian4.jpeg";
-import italia5 from "../images/italian5.jpeg";
-
-import catering from "../images/catering.jpeg";
-import catering2 from "../images/catering2.jpg";
-import catering3 from "../images/catering3.jpeg";
-import catering4 from "../images/catering4.jpeg";
-import catering5 from "../images/catering5.jpeg";
-import catering6 from "../images/catering6.jpeg";
-import Spinner from "../components/Spinner";
-
+const services = [
+    { number: "01", id: "private-dining", title: "Private dining", text: "A restaurant-level experience in your home, from a tailored menu to the final course.", image: featuredDish },
+    { number: "02", id: "event-catering", title: "Event catering", text: "Thoughtful food and seamless service for intimate celebrations, weddings, and corporate gatherings.", image: empanadas },
+    { number: "03", id: "chefs-table", title: "Chef's table", text: "A seasonal multi-course journey that brings Miguel's global influences to one shared table.", image: octopus },
+];
 
 function Services() {
-
-    const [isLoading, setIsLoading] = useState(true);
-
-    useEffect(() => {
-        const onLoad = () => {
-            setIsLoading(false);
-        };
-
-        window.addEventListener("load", onLoad);
-
-        // Añadimos un temporizador para asegurarnos de que el spinner se oculte después de un tiempo determinado, incluso si el evento 'load' no se dispara correctamente en Safari
-        const timer = setTimeout(() => {
-            setIsLoading(false);
-        }, 1000); // Cambia este valor según la duración que desees
-
-        return () => {
-            window.removeEventListener("load", onLoad);
-            clearTimeout(timer);
-        };
-    }, []);
     return (
-        <div>
-            <div className='container-services'>
-
-                <div className='service-carousel'>
-                    <Carousel slide={false}>
-                        <Carousel.Item>
-                            <img src={catering} alt='catering'></img>
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                            <img src={catering2} alt='catering'></img>
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                            <img src={catering3} alt='catering'></img>
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                            <img src={catering4} alt='catering'></img>
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                            <img src={catering5} alt='catering'></img>
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                            <img src={catering6} alt='catering'></img>
-                        </Carousel.Item>
-                    </Carousel>
-                    <h2>CATERING</h2>
-                </div>
-
-                <div className='service-carousel'>
-                    <Carousel slide={false}>
-                        <Carousel.Item>
-                            <img src={pic} alt='asian'></img>
-                            <Carousel.Caption>
-                                <h3>SOPA WANTON</h3>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                            <img src={pic2} alt='asian'></img>
-                            <Carousel.Caption>
-                                <h3>ENSALADA DE PEPINO</h3>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                            <img src={pic3} alt='asian'></img>
-                            <Carousel.Caption>
-                                <h3>LUMPIAS</h3>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                            <img src={pic4} alt='asian'></img>
-                            <Carousel.Caption>
-                                <h3>ARROZ</h3>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                            <img src={pic5} alt='asian'></img>
-                            <Carousel.Caption>
-                                <h3>TALLARINES</h3>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                            <img src={pic6} alt='asian'></img>
-                            <Carousel.Caption>
-                                <h3>POLLO MIEL Y AJONJOLÍ</h3>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img src={pic10} alt='asian'></img>
-                            <Carousel.Caption>
-                                <h3>POLLO GARLIC-PARMESAN</h3>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                            <img src={pic7} alt='asian'></img>
-                            <Carousel.Caption>
-                                <h3>LOMITO EN SALSA DE OSTRAS</h3>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                            <img src={pic8} alt='asian'></img>
-                            <Carousel.Caption>
-                                <h3>ALAS EN BBQ COREANA</h3>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                            <img src={pic11} alt='asian'></img>
-                            <Carousel.Caption>
-                                <h3>BITES DE COSTILLA</h3>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                            <img src={pic9} alt='asian'></img>
-                            <Carousel.Caption>
-                                <h3>PANCETA CROCANTE</h3>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                    </Carousel>
-                    <h2>COMIDA ASIÁTICA</h2>
-                </div>
-                <div className='service-carousel'>
-                    <Carousel slide={false}>
-                        <Carousel.Item>
-                            <img src={ceviche} alt='ceviche'></img>
-                            <Carousel.Caption>
-                                <h3>CLÁSICO</h3>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                            <img src={ceviche2} alt='ceviche'></img>
-                            <Carousel.Caption>
-                                <h3>CLÁSICO</h3>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                    </Carousel>
-                    <h2>CEVICHE</h2>
-                </div>
-                <div className='service-carousel'>
-                    <Carousel slide={false}>
-                        <Carousel.Item>
-                            <img src={italia} alt='italian'></img>
-                            <Carousel.Caption>
-                                <h3>LASAGNA</h3>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                            <img src={italia3} alt='italian'></img>
-                            <Carousel.Caption>
-                                <h3>TORTELLINI</h3>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                            <img src={italia4} alt='italian'></img>
-                            <Carousel.Caption>
-                                <h3>GNOCCHI</h3>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-
-                        <Carousel.Item>
-                            <img src={italia5} alt='italian'></img>
-                            <Carousel.Caption>
-                                <h3>TIRAMISÙ</h3>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-
-                    </Carousel>
-                    <h2>COMIDA ITALIANA</h2>
-                </div>
-
-            </div>
-            <div className='more-info'>
-                <h4>Para más información</h4>
-
-                <a href='https://wa.me/message/26GNQXJCZ3VVM1' target='_blank' rel="noreferrer">
-                    <button href='' className='button'>Comunícate a través de Whatsapp</button>
-                </a>
-
-            </div>
-            {isLoading && <Spinner />}
-        </div>
+        <main id="main-content" className="services-page">
+            <PageMeta title="Services" description="Explore private dining, catering, chef's tables, and pop-up events by Chef Miguel Bravo in Tampa Bay." />
+            <header className="page-hero services-hero">
+                <span>Gather · Taste · Celebrate</span>
+                <h1>Hospitality, <br aria-hidden="true" />made personal.</h1>
+                <p>Custom culinary experiences for homes and venues across Tampa Bay.</p>
+            </header>
+            <nav className="service-index" aria-label="Services on this page">
+                {services.map((service) => <a href={`#${service.id}`} key={service.id}><span>{service.number}</span>{service.title}</a>)}
+                <a href="#experiences"><span>04</span>Pop-up events</a>
+            </nav>
+            <section className="services-grid">
+                {services.map((service) => (
+                    <article className="service-card" id={service.id} key={service.title} data-reveal>
+                        <div className="service-image"><img src={service.image} alt={`${service.title} experience by Miguel Bravo`} loading="lazy" width="1200" height="900" /></div>
+                        <div className="service-copy">
+                            <span>{service.number}</span>
+                            <h2>{service.title}</h2>
+                            <p>{service.text}</p>
+                        </div>
+                    </article>
+                ))}
+            </section>
+            <section className="event-story" id="experiences" data-reveal>
+                <span className="section-kicker">Pop-ups and special events</span>
+                <h2>One table. One menu. <br aria-hidden="true" />One night only.</h2>
+                <p>Miguel’s pop-up dinners are intimate culinary experiences built around seasonality, technique, and surprise. They can also be created as a private edition for your own group and location.</p>
+            </section>
+            <section className="event-gallery" aria-label="Pop-up dinner experience" data-reveal>
+                <img src={dinner} alt="Guests sharing a Miguel Bravo pop-up dinner" loading="lazy" width="1200" height="900" />
+                <img src={table} alt="An intimate table prepared for a culinary event" loading="lazy" width="900" height="700" />
+                <img src={detail} alt="A course served during a pop-up dinner" loading="lazy" width="900" height="700" />
+            </section>
+            <section className="event-details">
+                <div><span>What to expect</span><h2>A complete experience</h2></div>
+                <div><p>Seasonal multi-course menus</p><p>Private homes or selected venues</p><p>Intimate, limited seating</p><p>Thoughtful service from start to finish</p></div>
+            </section>
+            <section className="service-cta">
+                <span>Have something special in mind?</span>
+                <h2>Let’s create a menu your guests will talk about.</h2>
+                <Link to="/contact">Plan your event <b>→</b></Link>
+            </section>
+        </main>
     );
 }
 
