@@ -67,10 +67,12 @@ nav.navbar {
     .offcanvas-title { font-size:30px; font-weight:400; }
     .offcanvas-body { display:flex; align-items:center; padding:30px 28px 50px !important; }
     .primary-nav { width:100%; padding:0 !important; }
-    .primary-nav .nav-link { display:flex; align-items:center; justify-content:space-between; min-height:64px; margin:0 !important; padding:14px 0 !important; border-bottom:1px solid rgba(255,255,255,.12); font-family:Georgia,serif; font-size:clamp(30px,9vw,44px); font-weight:400; letter-spacing:-.025em; line-height:1; text-transform:none; }
+    .offcanvas .primary-nav .nav-link { display:flex; align-items:center; justify-content:space-between; min-height:64px; margin:0 !important; padding:14px 0 !important; border-bottom:1px solid rgba(255,255,255,.2); color:#f5efe4 !important; font-family:Georgia,serif; font-size:clamp(30px,9vw,44px); font-weight:400; letter-spacing:-.025em; line-height:1; text-transform:none; opacity:1; }
     .primary-nav .nav-link::after { content:'\2197'; color:#ce981f; font-family:Arial,sans-serif; font-size:18px; }
     .primary-nav .nav-link::before { display:none; }
-    .primary-nav .nav-link.active { padding-left:14px !important; border-left:2px solid #ce981f; }
+    .offcanvas .primary-nav .nav-link:hover,
+    .offcanvas .primary-nav .nav-link:focus-visible { color:#ddb24d !important; }
+    .offcanvas .primary-nav .nav-link.active { padding-left:14px !important; border-left:2px solid #ce981f; color:#ce981f !important; }
 }
 
 .links-drop {

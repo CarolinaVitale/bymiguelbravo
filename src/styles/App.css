@@ -60,11 +60,11 @@ body {
 @media(max-width:767px){.service-index{top:58px;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.service-index::-webkit-scrollbar{display:none}.service-index a{min-width:190px;scroll-snap-align:start}.service-card{grid-template-columns:1fr}.service-card .service-image,.service-card:nth-child(even) .service-image{order:1}.service-card .service-copy,.service-card:nth-child(even) .service-copy{order:2}.service-image img{min-height:430px}.services-grid{padding:12px}.contact-options{grid-template-columns:1fr}.contact-options::before{top:18px}.contact-options a{min-height:280px;border-right:0;border-bottom:1px solid rgba(32,32,40,.16)}}
 
 .home-hero .carousel-item img {
+  display: block;
   object-fit: cover;
   object-position: center;
+  transform: none;
 }
-.home-hero .carousel-item.active img { animation:hero-drift 7s ease-out both; }
-@keyframes hero-drift{from{transform:scale(1.045)}to{transform:scale(1)}}
 
 .home-hero-shade {
   position: absolute;
@@ -679,7 +679,9 @@ textarea:focus-visible {
   .inquiry-section { grid-template-columns:1fr; padding:75px 24px; }
   .form-row { grid-template-columns:1fr; }
   .contact-options { grid-template-columns:1fr; }
-  .carousel-motion-control { right:16px; bottom:16px; }
+  .carousel-motion-control { right:16px; bottom:16px; display:grid; place-items:center; width:44px; height:44px; padding:0; border-radius:50%; font-size:14px; letter-spacing:0; }
+  .carousel-motion-label { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+  .carousel-motion-icon { display:block; line-height:1; }
   .not-found-page { min-height:calc(100svh - 66px); }
 }
 

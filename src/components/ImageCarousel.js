@@ -37,6 +37,7 @@ function ImageCarousel() {
                             alt={alt}
                             onLoad={index === 0 ? () => setIsLoading(false) : undefined}
                             loading={index === 0 ? "eager" : "lazy"}
+                            decoding={index === 0 ? "sync" : "async"}
                             width="1600"
                             height="1000"
                         />
@@ -45,8 +46,9 @@ function ImageCarousel() {
             </Carousel>
             {isLoading && <Spinner />}
             {!reduceMotion && (
-                <button className="carousel-motion-control" type="button" onClick={() => setIsPaused((value) => !value)} aria-pressed={isPaused}>
-                    {isPaused ? "Play slideshow" : "Pause slideshow"}
+                <button className="carousel-motion-control" type="button" onClick={() => setIsPaused((value) => !value)} aria-pressed={isPaused} aria-label={isPaused ? "Play slideshow" : "Pause slideshow"}>
+                    <span className="carousel-motion-icon" aria-hidden="true">{isPaused ? "▶" : "Ⅱ"}</span>
+                    <span className="carousel-motion-label">{isPaused ? "Play slideshow" : "Pause slideshow"}</span>
                 </button>
             )}
         </div>

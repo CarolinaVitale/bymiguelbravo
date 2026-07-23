@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import "../styles/Menu.css";
 import signaturePork from "../images/editorial/signature-pork.jpg";
 import crispyBites from "../images/editorial/crispy-bites.jpg";
@@ -17,6 +17,31 @@ const gallery = [
 ];
 
 function Menu() {
+    const galleryRef = useRef(null);
+    const [activeDish, setActiveDish] = useState(0);
+
+    const moveGallery = (direction) => {
+        const galleryElement = galleryRef.current;
+        if (!galleryElement) return;
+        const nextIndex = Math.max(0, Math.min(gallery.length - 1, activeDish + direction));
+        galleryElement.children[nextIndex]?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+        setActiveDish(nextIndex);
+    };
+
+    const updateActiveDish = () => {
+        const galleryElement = galleryRef.current;
+        if (!galleryElement) return;
+        const cards = Array.from(galleryElement.children);
+        const galleryCenter = galleryElement.scrollLeft + galleryElement.clientWidth / 2;
+        const closestIndex = cards.reduce((bestIndex, card, index) => {
+            const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+            const bestCard = cards[bestIndex];
+            const bestCenter = bestCard.offsetLeft + bestCard.offsetWidth / 2;
+            return Math.abs(cardCenter - galleryCenter) < Math.abs(bestCenter - galleryCenter) ? index : bestIndex;
+        }, 0);
+        setActiveDish(closestIndex);
+    };
+
     return (
         <main id="main-content" className="menu-page">
             <PageMeta title="Ocho Trece" description="Discover the food, space, and creative energy of Ocho Trece through Chef Miguel Bravo's work in Tampa." />
@@ -42,7 +67,15 @@ function Menu() {
                     <span className="section-kicker">From Miguel’s table</span>
                     <h2 id="menu-gallery-title">A taste of the experience</h2>
                 </div>
-                <div className="food-grid">
+                <div className="gallery-mobile-controls" aria-label="Gallery controls">
+                    <span>Swipe to explore</span>
+                    <strong><span aria-live="polite">{String(activeDish + 1).padStart(2, "0")}</span> / {String(gallery.length).padStart(2, "0")}</strong>
+                    <div>
+                        <button type="button" onClick={() => moveGallery(-1)} disabled={activeDish === 0} aria-label="Previous dish">←</button>
+                        <button type="button" onClick={() => moveGallery(1)} disabled={activeDish === gallery.length - 1} aria-label="Next dish">→</button>
+                    </div>
+                </div>
+                <div className="food-grid" ref={galleryRef} onScroll={updateActiveDish}>
                     {gallery.map(([image, alt, label], index) => (
                         <figure className={`food-grid-item food-grid-item-${index + 1}`} key={image} data-reveal style={{ "--reveal-delay": `${index * 80}ms` }}>
                             <img src={image} alt={alt} loading="lazy" width="1200" height="1600" />
