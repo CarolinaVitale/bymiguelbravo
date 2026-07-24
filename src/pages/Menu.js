@@ -5,6 +5,9 @@ import crispyBites from "../images/editorial/crispy-bites.jpg";
 import porkPuree from "../images/editorial/pork-puree.jpg";
 import slicedBeef from "../images/editorial/sliced-beef.jpg";
 import chickenSkewer from "../images/editorial/chicken-skewer.jpg";
+import ochoFishBlack from "../images/brand/ocho-trece/fish-black.png";
+import ochoFishGold from "../images/brand/ocho-trece/fish-gold.png";
+import ochoSealWhite from "../images/brand/ocho-trece/seal-white.png";
 import PageMeta from "../components/PageMeta";
 import { Link } from "react-router-dom";
 
@@ -46,12 +49,16 @@ function Menu() {
         <main id="main-content" className="menu-page">
             <PageMeta title="Ocho Trece" description="Discover the food, space, and creative energy of Ocho Trece through Chef Miguel Bravo's work in Tampa." />
             <header className="page-hero menu-hero">
-                <span>Ocho Trece · Tampa</span>
-                <h1>A chapter told <br aria-hidden="true" />through food.</h1>
-                <p>A visual look at the restaurant, the dishes, and the ideas brought to life in Miguel’s kitchen.</p>
+                <div className="menu-hero-copy">
+                    <span>Ocho Trece · Tampa</span>
+                    <h1>A chapter told <br aria-hidden="true" />through food.</h1>
+                    <p>A visual look at the restaurant, the dishes, and the ideas brought to life in Miguel’s kitchen.</p>
+                </div>
+                <img className="ocho-hero-seal" src={ochoSealWhite} alt="Ocho Trece — A Taste of Identity" width="695" height="696" />
             </header>
 
             <section className="menu-intro" data-reveal>
+                <img className="ocho-intro-mark" src={ochoFishBlack} alt="" aria-hidden="true" width="695" height="455" />
                 <div>
                     <span className="section-kicker">Inside Ocho Trece</span>
                     <h2>Food with a point of view.</h2>
@@ -60,6 +67,15 @@ function Menu() {
                     <p>This is not a fixed menu. It is a portrait of a creative period: seasonal plates, bold contrasts, and an approach shaped by Asian, Latin American, and European influences.</p>
                     <a href="https://ochotrece.restaurant/" target="_blank" rel="noreferrer">Visit Ocho Trece <span>↗</span></a>
                 </div>
+            </section>
+
+            <section className="ocho-brand-moment" aria-label="The Ocho Trece identity" data-reveal>
+                <div>
+                    <span>Ocho Trece identity</span>
+                    <p>Part rabbit, part fish — a symbol for a kitchen that refuses to fit inside one category.</p>
+                </div>
+                <img src={ochoFishGold} alt="Ocho Trece rabbit-fish symbol" width="695" height="455" />
+                <small>Venezuela · Peru · Spain · Tampa</small>
             </section>
 
             <section className="menu-gallery" aria-labelledby="menu-gallery-title">
@@ -71,8 +87,12 @@ function Menu() {
                     <span>Swipe to explore</span>
                     <strong><span aria-live="polite">{String(activeDish + 1).padStart(2, "0")}</span> / {String(gallery.length).padStart(2, "0")}</strong>
                     <div>
-                        <button type="button" onClick={() => moveGallery(-1)} disabled={activeDish === 0} aria-label="Previous dish">←</button>
-                        <button type="button" onClick={() => moveGallery(1)} disabled={activeDish === gallery.length - 1} aria-label="Next dish">→</button>
+                        <button className="gallery-drawn-arrow gallery-drawn-arrow-prev" type="button" onClick={() => moveGallery(-1)} disabled={activeDish === 0} aria-label="Previous dish">
+                            <svg viewBox="0 0 86 48" aria-hidden="true"><path d="M80 23 C62 12 45 35 18 24" /><path d="M31 12 L17 24 L31 36" /></svg>
+                        </button>
+                        <button className="gallery-drawn-arrow gallery-drawn-arrow-next" type="button" onClick={() => moveGallery(1)} disabled={activeDish === gallery.length - 1} aria-label="Next dish">
+                            <svg viewBox="0 0 86 48" aria-hidden="true"><path d="M6 24 C25 13 42 35 69 24" /><path d="M56 12 L70 24 L56 36" /></svg>
+                        </button>
                     </div>
                 </div>
                 <div className="food-grid" ref={galleryRef} onScroll={updateActiveDish}>

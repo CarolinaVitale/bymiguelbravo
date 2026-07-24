@@ -5,7 +5,8 @@
 .event-hero div { position:relative; }
 .event-hero span,.event-details span { color:#d4a029; font-size:11px; font-weight:700; letter-spacing:.3em; text-transform:uppercase; }
 .event-hero h1 { margin:18px 0 0; font-family:Georgia,serif; font-size:clamp(72px,13vw,180px); font-weight:400; letter-spacing:-.06em; line-height:.78; }
-.event-story { max-width:1040px; margin:auto; padding:120px 28px; }
+.event-story { position:relative; isolation:isolate; max-width:none; margin:auto; overflow:hidden; padding:120px max(28px,calc((100vw - 984px)/2)); }
+.event-story::before { content:''; position:absolute; z-index:-1; right:-18vw; bottom:7%; width:clamp(650px,82vw,1180px); aspect-ratio:2.92; background:url('../images/brand/miguel-bravo-black.png') center/contain no-repeat; opacity:.032; transform:rotate(-6deg); pointer-events:none; }
 .event-story h2 { margin:24px 0 35px; font-family:Georgia,serif; font-size:clamp(46px,7vw,88px); font-weight:400; letter-spacing:-.04em; line-height:1; }
 .event-story p { max-width:680px; margin-left:auto; color:#69675f; font-size:15px; line-height:1.9; }
 .event-gallery { display:grid; grid-template-columns:1.25fr .75fr; grid-template-rows:360px 360px; gap:10px; padding:10px; background:#202028; }
@@ -17,4 +18,4 @@
 .event-cta { padding:120px 28px; text-align:center; }
 .event-cta h2 { margin:0; font-family:Georgia,serif; font-size:clamp(50px,8vw,100px); font-weight:400; }
 .event-cta p { color:#6b6961; }.event-cta a { display:inline-block; margin-top:28px; color:#202028; font-size:11px; letter-spacing:.24em; text-decoration:none; text-transform:uppercase; border-bottom:1px solid;padding-bottom:8px; }
-@media(max-width:767px){.event-hero{min-height:680px}.event-gallery{grid-template-columns:1fr;grid-template-rows:500px 300px 300px}.event-gallery img:first-child{grid-row:auto}.event-details{grid-template-columns:1fr}.event-story{padding:80px 26px}.event-story p{margin-left:0}}
+@media(max-width:767px){.event-hero{min-height:680px}.event-gallery{grid-template-columns:1fr;grid-template-rows:500px 300px 300px}.event-gallery img:first-child{grid-row:auto}.event-details{grid-template-columns:1fr}.event-story{padding:80px 26px}.event-story::before{right:-75%;bottom:9%;width:210vw;opacity:.028;transform:rotate(-10deg)}.event-story p{margin-left:0}}

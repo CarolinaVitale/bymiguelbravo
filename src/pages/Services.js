@@ -31,13 +31,31 @@ function Services() {
                 <a href="#experiences"><span>04</span>Pop-up events</a>
             </nav>
             <section className="services-grid">
-                {services.map((service) => (
+                {services.map((service, index) => (
                     <article className="service-card" id={service.id} key={service.title} data-reveal>
                         <div className="service-image"><img src={service.image} alt={`${service.title} experience by Miguel Bravo`} loading="lazy" width="1200" height="900" /></div>
                         <div className="service-copy">
                             <span>{service.number}</span>
                             <h2>{service.title}</h2>
                             <p>{service.text}</p>
+                            {index < 2 && (
+                                <div className="service-scroll-cue" aria-hidden="true">
+                                    <span>{index === 0 ? "Keep exploring" : "Next experience"}</span>
+                                    <svg viewBox="0 0 72 250" role="presentation">
+                                        <path className="service-scroll-path" d="M36 4 C53 42 18 70 38 112 C55 148 20 176 36 214" />
+                                        <path className="service-scroll-arrow" d="M20 198 L36 218 L52 197 M23 216 L36 233 L49 215" />
+                                    </svg>
+                                </div>
+                            )}
+                            {index === 2 && (
+                                <div className="service-finale-mark" aria-hidden="true">
+                                    <svg viewBox="0 0 96 96" role="presentation">
+                                        <path d="M48 5 C50 27 53 39 72 47 C53 51 51 63 47 90 C44 65 39 53 18 48 C39 43 44 29 48 5Z" />
+                                        <path d="M17 18 L28 30 M78 18 L67 30 M76 73 L66 63" />
+                                    </svg>
+                                    <span>Made to surprise</span>
+                                </div>
+                            )}
                         </div>
                     </article>
                 ))}

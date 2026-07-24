@@ -21,6 +21,7 @@
 
 /* Home content — modular editorial sections */
 .program-section {
+    position: relative;
     display: grid;
     grid-template-columns: minmax(280px, .82fr) minmax(440px, 1.18fr);
     min-height: 650px;
@@ -28,6 +29,23 @@
     background: #f5f3ee;
     text-align: left;
 }
+
+/* A cropped brush mark gives the first editorial panel the gesture of the MB monogram. */
+.program-section.bio::before {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: -12vw;
+    width: clamp(300px, 42vw, 650px);
+    aspect-ratio: 1;
+    background: url('../images/brand/mb-black.png') center/contain no-repeat;
+    opacity: .032;
+    transform: translateY(-50%) rotate(-11deg);
+    pointer-events: none;
+}
+
+.program-section.bio > * { position: relative; z-index: 1; }
 
 .program-section.catering {
     grid-template-columns: minmax(440px, 1.18fr) minmax(280px, .82fr);
@@ -129,6 +147,7 @@
     .program-visual,
     .program-carousel { height: min(72vh, 560px); margin: 0; }
     .program-carousel img { height: 100%; }
+    .program-section.bio::before { top: 31%; left: -48%; width: 115vw; opacity: .026; }
 }
 
 .catering {
