@@ -13,7 +13,7 @@ function Contact() {
             </section>
 
             <section className="contact-options" aria-label="Ways to connect" data-reveal>
-                <a href="https://www.instagram.com/chefbravovera/" target="_blank" rel="noreferrer"><span>Bookings and inquiries</span><h2>Instagram</h2><b>Message @chefbravovera →</b></a>
+                <a href="https://www.instagram.com/miguelbravovera/" target="_blank" rel="noreferrer"><span>Bookings and inquiries</span><h2>Instagram</h2><b>Message @miguelbravovera →</b></a>
                 <a href="https://www.linkedin.com/in/miguelbravovera/" target="_blank" rel="noreferrer"><span>Professional inquiries</span><h2>LinkedIn</h2><b>Connect with Miguel →</b></a>
             </section>
             <section className="contact-location" data-reveal><span>Serving</span><h2>Tampa Bay, Florida</h2><p>Available for select travel and destination events.</p></section>

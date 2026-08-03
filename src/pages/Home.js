@@ -47,6 +47,12 @@ function App() {
                         Plan your experience
                     </Link>
                 </div>
+                <div className="hero-edition" aria-hidden="true">
+                    <span>01</span>
+                    <i />
+                    <span>Tampa Bay</span>
+                </div>
+                <div className="hero-ghost-word" aria-hidden="true">BRAVO</div>
                 <span className="hero-scroll" aria-hidden="true">Discover</span>
             </section>
 

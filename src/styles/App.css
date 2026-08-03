@@ -80,6 +80,12 @@ body {
   object-fit: cover;
   object-position: center;
   transform: none;
+  animation: hero-image-breathe 9s ease-in-out both;
+}
+
+@keyframes hero-image-breathe {
+  from { transform: scale(1.015); }
+  to { transform: scale(1.055); }
 }
 
 .home-hero-shade {
@@ -100,6 +106,28 @@ body {
   transform: none;
   text-align: left;
 }
+
+.hero-edition {
+  position:absolute;
+  z-index:2;
+  top:50%;
+  right:clamp(18px,3.5vw,56px);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:13px;
+  color:rgba(255,255,255,.72);
+  font-size:8px;
+  font-style:normal;
+  font-weight:700;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  transform:translateY(-50%);
+  writing-mode:vertical-rl;
+}
+.hero-edition i { width:1px; height:64px; background:linear-gradient(to bottom,transparent,#d09a22,transparent); animation:hero-edition-pulse 2.5s ease-in-out infinite; }
+.hero-ghost-word { position:absolute; z-index:1; right:-.03em; bottom:-.15em; color:transparent; font-family:Georgia,serif; font-size:clamp(120px,22vw,360px); letter-spacing:-.08em; line-height:1; -webkit-text-stroke:1px rgba(255,255,255,.11); pointer-events:none; }
+@keyframes hero-edition-pulse { 0%,100%{transform:scaleY(.45);opacity:.35}50%{transform:scaleY(1);opacity:1} }
 
 .hero-eyebrow,
 .section-number {
@@ -182,7 +210,11 @@ body {
   width: 40px;
   height: 1px;
   background: rgba(255,255,255,.55);
+  transform-origin: left center;
+  animation: discover-line 1.8s ease-in-out infinite;
 }
+
+@keyframes discover-line { 0%,100% { transform:scaleX(.45); opacity:.4; } 50% { transform:scaleX(1); opacity:1; } }
 
 @media (max-width: 767px) {
   .home-hero { height: calc(100svh - 58px); min-height: 590px; }
@@ -193,6 +225,19 @@ body {
   .hero-title { margin:15px 0; font-size:clamp(46px,14vw,68px); }
   .home-hero .contact-button { width: auto; padding: 0 20px; }
   .hero-scroll { display: none; }
+  .hero-edition { top:26px; right:16px; transform:none; }
+  .hero-edition i { height:34px; }
+  .hero-ghost-word { right:-.08em; bottom:.05em; font-size:31vw; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-hero .carousel-item img,
+  .hero-scroll::before,
+  .hero-edition i,
+  .hero-title,
+  .home-hero-content p,
+  .home-hero-content .contact-button,
+  .hero-eyebrow { animation: none; }
 }
 
 @media (max-width: 767px) {
