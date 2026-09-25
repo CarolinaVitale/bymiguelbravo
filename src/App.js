@@ -2,7 +2,7 @@ import React from "react";
 import "./styles/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/Home";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import Services from "./pages/Services";
 import NavbarOff from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -12,23 +12,27 @@ import ScrollToTopOnMount from "./components/ScrollToTopOnMount";
 import Menu from "./pages/Menu";
 import NotFound from "./pages/NotFound";
 import ScrollReveal from "./components/ScrollReveal";
+import Links from "./pages/Links";
 
 
-function App() {
+function SitePages() {
+  const { pathname } = useLocation();
+  const isLinksPage = /^\/links\/?$/i.test(pathname);
 
   return (
 
-    <Router>
+    <>
 
       <ScrollToTopOnMount />
       <ScrollReveal />
 
       <a className="skip-link" href="#main-content">Skip to main content</a>
 
-      <NavbarOff />
+      {!isLinksPage && <NavbarOff />}
 
       <Routes>
         <Route path="/" element={<Home />} exact />
+        <Route path="/links" element={<Links />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/services" element={<Services />} />
         <Route path="/about" element={<About />} />
@@ -42,14 +46,18 @@ function App() {
 
       </Routes>
 
-      <Footer />
+      {!isLinksPage && <Footer />}
 
-    </Router>
+    </>
 
   );
 
 }
 
 
+
+function App() {
+  return <Router><SitePages /></Router>;
+}
 
 export default App;
