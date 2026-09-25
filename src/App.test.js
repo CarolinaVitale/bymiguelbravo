@@ -32,3 +32,13 @@ test("renders a recoverable not-found page", () => {
   expect(screen.getByRole("heading", { name: /this table isn.t set/i })).toBeInTheDocument();
   expect(screen.getByRole("link", { name: /return home/i })).toBeInTheDocument();
 });
+
+test("renders Manuel's separate contact page with the restaurant links", () => {
+  window.history.pushState({}, "", "/links/manuel");
+  render(<App />);
+  expect(screen.getByRole("heading", { name: "Manuel Bravo" })).toBeInTheDocument();
+  expect(screen.getByRole("link", { name: /save my contact/i })).toHaveAttribute("href", "/manuel-bravo.vcf");
+  expect(screen.queryByRole("link", { name: /^my website/i })).not.toBeInTheDocument();
+  expect(screen.getByRole("link", { name: /visit our website/i })).toHaveAttribute("href", "https://ochotrece.restaurant");
+  expect(document.title).toBe("Contact & links | Manuel Bravo");
+});

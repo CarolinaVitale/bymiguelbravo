@@ -17,7 +17,7 @@ import Links from "./pages/Links";
 
 function SitePages() {
   const { pathname } = useLocation();
-  const isLinksPage = /^\/links\/?$/i.test(pathname);
+  const isLinksPage = /^\/links(?:\/manuel)?\/?$/i.test(pathname);
 
   return (
 
@@ -33,6 +33,7 @@ function SitePages() {
       <Routes>
         <Route path="/" element={<Home />} exact />
         <Route path="/links" element={<Links />} />
+        <Route path="/links/manuel" element={<Links manuel />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/services" element={<Services />} />
         <Route path="/about" element={<About />} />
